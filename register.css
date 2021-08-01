@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #1c94b39d;
+}
+.registration{
+    color: #ffffff;
+    width: 800px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+    background-color: rgp(0,0,0,0.6);
+}
