@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="booking.css">
+    <script src="booking.js"></script>
 </head>
+
 <body>
-    <table>
-        <tr>
-            <th>Airlines</th>
-            <th>Depature</th>
-            <th>Arival</th>
-            <th>Duration</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Indian airlines</td>
-        </tr>
-    </table>
-    
+    <div class="airline">
+        <header>
+            <h1>Airline</h1>
+        </header>
+        <br>
+
+    </div>
+    <div class = "depature_information">
+        <h2>Departure Information</h2>
+    </div>
+
+    <div>
+        <fieldset class="fieldset_table">
+            
+            <table class="depature_table">
+                <tr>
+                    <th>Flight</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Price</th>
+                    <th>Booking</th>
+                </tr>
+                <tr>
+                    <td>4000</td>
+                    <td>chennai</td>
+                    <td>mumbai</td>
+                    <td>₹5200</td>
+                    <td><button>Book now</button></td>
+                </tr>
+                <tr>
+                    <td>4001</td>
+                    <td>chennai</td>
+                    <td>mumbai</td>
+                    <td>₹5100</td>
+                    <td><button>Book now</button></td>
+                </tr>
+                <tr>
+                    <td>4002</td>
+                    <td>chennai</td>
+                    <td>mumbai</td>
+                    <td>₹5300</td>
+                    <td><button>Book now</button></td>
+                </tr>
+                <tbody id="task_table"></tbody>
+            </table>
+        </fieldset>
+    </div>
+
 </body>
+
 </html>

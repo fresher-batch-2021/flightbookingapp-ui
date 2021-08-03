@@ -18,7 +18,7 @@
             <nav class="navbar">
 
                 <a class="nav-item" href="login.html">
-                    <b>Login</b>
+                    <b>Login</b></a>
                 </a>
                 <a class="nav-item" href="register.html">
                     <b>Register</b>
@@ -37,10 +37,10 @@
             </h1>
             <form action="booking.html">
                 <div class="col">
-
-                    <label for="from">FROM:</label>
-                    <select name="from" id="" required>
-                        <option value="">Select option...</option>
+                    <span>
+                    <label for="from"><b>FROM:</b></label>
+                    <select name="from" id="from" required>
+                        <option value="Null">Select option...</option>
                         <option value="Cambodia">Cambodia</option>
                         <option value="Hong Kong">Hong Kong</option>
                         <option value="India">India</option>
@@ -51,14 +51,13 @@
                         <option value="Singapore">Singapore</option>
                         <option value="Thailand">Thailand</option>
                         <option value="Vietnam">Vietnam</option>
-
                     </select>
-
+                    </span>
                 </div>
                 <div class="col">
-
-                    <label for="to">TO:</label>
-                    <select name="to" id="" required>
+                    <span>
+                    <label for="to"><b>TO:</b></label>
+                    <select name="to" id="to" required>
                         <option value="null">Select option...</option>
                         <option value="Cambodia">Cambodia</option>
                         <option value="Hong Kong">Hong Kong</option>
@@ -70,20 +69,19 @@
                         <option value="Singapore">Singapore</option>
                         <option value="Thailand">Thailand</option>
                         <option value="Vietnam">Vietnam</option>
-
                     </select>
-
+                    </span>
                 </div>
                 <div class="date">
-                    <label for="Departure">DEPATURE DATE:</label>
-                    <input type="date" name="depature" id="" required>
+                    <label for="Departure"><b>DEPATURE DATE:</b></label>
+                    <input type="date" name="depature" id="depature_date" required>
                 </div>
                 <div class="date">
-                    <label for="return">RETURN DATE:</label>
-                    <input type="date" name="depature" id="" required>
+                    <label for="return"><b>RETURN DATE:</b></label>
+                    <input type="date" name="depature" id="return_date" required>
                 </div>
                 <div class="align">
-                    <button type="submit" class="order">ORDER TICKET NOW</button>
+                    <button type="submit" class="order_ticket">SEARCH</button>
 
                 </div>
 

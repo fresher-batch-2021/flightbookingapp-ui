@@ -1,0 +1,53 @@
+body{
+    background-image: url(img/banner9.jpg);
+    color: white;
+    padding: 0;
+    margin:auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.depature_information{
+    text-align: center;
+    color: black;
+}
+.airline{
+    text-align: center;
+    background-color: #04AA6D;
+    
+    padding: 10px;
+}
+.fieldset_table{
+    background: rgba(0, 0, 0, 0.5); 
+    width: 600px;
+    margin-top: 10px;
+    margin: auto;
+}
+.legend_depature{
+    color: black;    
+    background-color:whitesmoke;        
+}
+.depature_table{
+    font-size: 25px;
+    padding: 20px;
+    tab-size: 500px;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    
+}
+.depature_table tr:hover{
+    background-color: white;
+    color: black;
+}
+.depature_table th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+.depature_table button{
+    width: 100%;
+    font-size: 20px;
+    height: 40px;
+    border: none;
+    background-color: #04AA6D;
+}
