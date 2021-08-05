@@ -1,11 +1,17 @@
-function register(){
-    event.preventDefault();
+function register(){ 
+    event.preventDefault();   
     var name = document.getElementById("name").value;
     var mobile_number = document.getElementById("mobile").value;
     var email = document.getElementById("email").value;
     var user_name = document.getElementById("uname").value;
     var password = document.getElementById("password").value;
     var confirm_password = document.getElementById("confirm").value;
+    let user_details = {
+        "Name": name,
+        "Mobile_no": mobile_number,
+        "Email": email,
+        "user name": user_name,        
+    }
 
     if(name=="" || name == null || name.trim ==""){
         alert("Invalid Name");
@@ -37,7 +43,8 @@ function register(){
         return false;
     }
     else{
-        alert("sucessfull registered")
+        console.log(user_details);
+        alert("sucessfull registered");        
         window.location.href = "login.html"
     }
 }

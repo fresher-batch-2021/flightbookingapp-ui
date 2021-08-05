@@ -12,3 +12,4 @@ function display_flight(){
     }
     document.querySelector("#tasks_table").innerHTML = content;
 }
+display_flight();

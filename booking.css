@@ -17,14 +17,12 @@ body{
 }
 .fieldset_table{
     background: rgba(0, 0, 0, 0.5); 
-    width: 600px;
+    width: 1000px;
     margin-top: 10px;
     margin: auto;
 }
-.legend_depature{
-    color: black;    
-    background-color:whitesmoke;        
-}
+        
+
 .depature_table{
     font-size: 25px;
     padding: 20px;
