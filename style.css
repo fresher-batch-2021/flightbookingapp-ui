@@ -13,16 +13,16 @@ label{
 .col{
     position: relative;
     min-height: 1px;
-    padding-right: 15px;    ;
     padding: 15px;
+    padding-right: 15px;    
     display: inline-block;
 }
 
 .date{
     position: relative;
     min-height: 1px;
-    padding-right: 15px;    
     padding: 15px;
+    padding-right: 15px;    
     display: block; 
        
 }
@@ -30,8 +30,8 @@ label{
 .order{
     position: relative;
     min-height: 1px;
-    padding-right: 15px;    
     padding: 15px;
+    padding-right: 15px;    
     display: block; 
         
 }
@@ -67,11 +67,10 @@ label{
 table{
     border: 2px solid black;
 }
-.header{
-    background-color: bisque;
+.header{    
     padding-left: 1100px;
     background: transparent;
-    
+    background-color: bisque;    
 }
 
 .nav-item{
