@@ -13,8 +13,7 @@ label{
 .col{
     position: relative;
     min-height: 1px;
-    padding-right: 15px;
-    padding-right: 15px;
+    padding-right: 15px;    ;
     padding: 15px;
     display: inline-block;
 }
