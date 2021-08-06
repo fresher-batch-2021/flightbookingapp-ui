@@ -2,7 +2,7 @@ body
 {  
     margin: 0;  
     padding: 0;  
-    background-image: url(img/8.jpg);
+    background-image: url(img/banner9.jpg);
     background-repeat: 100%;
     font-family: 'Arial'; 
      
@@ -13,7 +13,7 @@ body
     margin: 20 0 0 450px;
     height: 200px;
     padding: 80px;  
-    background: rgba(0, 0, 0, 0.5);  
+    background: rgba(0, 0, 0, 0.8);  
     border-radius: 15px ;
     border:5px solid white;
           
@@ -21,7 +21,7 @@ body
 }  
 h2{  
     text-align: center;  
-    color:  white;     
+    color:  black;     
     font-size: 40px;  
 }  
 label{  
@@ -45,17 +45,17 @@ label{
       
 }  
 #log{  
-    width: 300px;  
-    height: 30px;  
+    width: 100%;  
+    height: 100%;  
     border: none;  
-    border-radius: 17px;  
+    border-radius: 10px;  
     padding-left: 7px;  
     color:black;  
     font-size: 25px;
 }  
 #log:hover{
-    background: gold;
-    color: black;
+    background: #04AA6D;
+    color: white;
 }
  
 .logo {
@@ -63,9 +63,9 @@ label{
     position: absolute;
     width: auto;
     height: 20%;
-    right: 47%;
-    top: 15%;
-    left: calc(50% - 50px)
+    right: 45%;
+    top: 30%;
+    
       
 
 }

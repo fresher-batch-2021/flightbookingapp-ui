@@ -1,5 +1,8 @@
 body{
-    background-image:url(img/banner5.jpg)
+    background-image:url(img/banner.jpg);
+    margin: 0;
+    padding: 0;
+    
     
 }
 label{
@@ -50,7 +53,7 @@ label{
     width: 100px;  
     height: 50px;  
     border: none;  
-    border-radius: 17px;  
+    border-radius: 10px;  
     padding-left: 7px;  
     color:black;  
 }
@@ -79,7 +82,7 @@ table{
     background: rgb(0, 0, 0);
     color:white;
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 5px;
     border: none;
     outline: none;
     text-decoration: none;
@@ -88,7 +91,7 @@ table{
 }
 .nav-item:hover{
     background: gray;
-    border-radius: 20px;
+    border-radius: 5px;
     color:#ffffff;
 }
 #from{
@@ -118,5 +121,4 @@ table{
     border: none;  
     border-radius: 3px;  
     padding-left: 8px;
-}
 }
