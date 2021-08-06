@@ -25,9 +25,9 @@
         <table id="passenger_table">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Gender</th>
+                    <th scope="row">Name</th>
+                    <th scope="row">Age</th>
+                    <th scope="row">Gender</th>
                 </tr>
             </thead>
             <tbody id="passenger_tablebody">
@@ -44,20 +44,20 @@
     <div class="login">
         <form onsubmit="passenger_validation()">
             <label>
-                <b>Name</b>
+                <strong>Name</strong>
             </label>
             <br>
             <input type="text" name="name" id="name" placeholder="Name">
             <br>
             <br>
             <label>
-                <b>Age</b>
+                <strong>Age</strong>
             </label>
             <br>
             <input type="text" name="age" id="age" placeholder="Age">
             <br>
             <br>
-            <label><b>Gender</b></label>
+            <label><strong>Gender</strong></label>
             <select name="gender" id="gender" required>]
                 <option value="select">Select</option>
                 <option value="male">Male</option>
