@@ -10,7 +10,7 @@
     <script src="passenger_details.js"></script>
 </head>
 
-<body>    
+<body>
     <div class="airline">
         <header>
             <h1>Airline</h1>
@@ -21,6 +21,7 @@
         <div class="second_heading">
             <h2>Passenger details </h2>
         </div>
+
         <table id="passenger_table">
             <thead>
                 <tr>
@@ -34,8 +35,9 @@
             </tbody>
 
         </table>
+
     </aside>
-    
+
     <div class="page_title">
         <h2>Enter Passenger details</h2>
     </div>
@@ -68,8 +70,13 @@
             <input type="submit" name="log" id="booking" value="Add passenger">
             <br>
             <br>
-        </form>        
+        </form>
     </div>
-    <br>
+    <div>
+        <form action="index.html" onsubmit="registration_successful()">
+            <input type="submit" value="Book Now" class="booking_button">
+        </form>
+    </div>
+
 
 </html>

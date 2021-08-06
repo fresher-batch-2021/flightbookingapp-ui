@@ -38,3 +38,7 @@ function passenger_details(){
      
     return false;
 }
+
+function registration_successful(){
+    alert("registration Successful");
+}
