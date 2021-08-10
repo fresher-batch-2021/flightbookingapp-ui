@@ -8,6 +8,17 @@ body{
 .depature_information{
     text-align: center;
     color: black;
+    
+}
+.depature_date{
+    text-align: center;
+    color: black;
+    display: inline;
+    margin-left: 170px;
+    
+}
+#depature_date{
+    margin: 10px;
 }
 .airline{
     text-align: center;

@@ -1,13 +1,31 @@
 function login_validation(){
-    event.preventDefault();    
-    var username = document.getElementById("Uname").value;
-    var password = document.getElementById("Pass").value;
-
-    if(username == "Rajesh9107" && password == 12345678){
-        alert("sucessfully Login");        
-        window.location.href = "index.html"
+    event.preventDefault(); 
+    let url ="https://product-mock-api.herokuapp.com/flightapp/api/v1/auth/login";   
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    let formData = {          
+        username: username,          
+        password: password
     }
-    else{
-        alert("Login faild");
-    }
+    axios.post(url, formData).then(res=>{            
+        let data = res.data;
+        console.log(data);
+        alert("Successffully Login");
+        passing_username();
+        window.location.href = "homepage.html"
+    }).catch(err=>{
+        let errorMessage = err.response.data.errorMessage;
+        console.error(errorMessage);
+        alert("Error-" + errorMessage);
+    });
+    
 }   
+
+function passing_username(){    
+    var userName = document.querySelector("#username").value;    
+    let username_data = {
+        "username": userName,        
+    };
+    console.log(username_data);        
+    localStorage.setItem('user',JSON.stringify(username_data));    
+}

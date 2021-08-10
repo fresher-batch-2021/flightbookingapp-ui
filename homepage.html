@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="homepage.js"></script>
 </head>
 
 <body>
@@ -21,11 +21,9 @@
         <header>
             <div class="header">
                 <a class="nav_item" href="login.html">
-                    <strong>Login</strong>
+                    <strong id="username">Username</strong>
                 </a>
-                <a class="nav_item" href="register.html">
-                    <strong>Register</strong>
-                </a>
+                
             </div>
         </header>
         <br>
@@ -36,7 +34,7 @@
                 <em>direction:</em>
             </h1>
             <br>
-            <form action="login.html"  onsubmit="passing_data()">
+            <form action="booking.html" onsubmit="passing_data()">
                 <div class="col">
                     <span>
                         <label for="from"><strong>FROM:</strong></label>
@@ -90,7 +88,12 @@
 
             </form>
         </fieldset>
+        <script>            
+            let user_details = JSON.parse(localStorage.getItem('user'));
+            console.log(user_details);
+            document.querySelector("#username").innerHTML = user_details.username;           
 
+        </script>
     </main>
 </body>
 

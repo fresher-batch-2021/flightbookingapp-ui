@@ -16,6 +16,9 @@
     <script>
         $("#header").load("header.html")
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <main>
         <div class="heading">
 
@@ -28,21 +31,22 @@
                 <label>
                     <strong>User Name</strong>
                 </label>
-                <input type="text" name="usernamename" id="username" placeholder="Username" required >
+                <input type="text" name="username" id="username" placeholder="Username" required>
                 <br>
                 <br>
                 <label>
                     <strong>Password</strong>
                 </label>
-                <input type="password" name="passwordass" id="password" placeholder="Password" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
                 <br>
                 <br>
                 <br>
                 <br>
                 <input type="submit" name="log" id="log" value="Log In Here">
                 <br>
-                <br>
-
+                <br>                
+                <label>New Registration</label>
+                <a href="register.html" class="new_register">Click Here</a>                
             </form>
         </div>
     </main>

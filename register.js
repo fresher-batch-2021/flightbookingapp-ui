@@ -3,7 +3,7 @@ function register(){
     var name = document.getElementById("name").value;
     var mobile_number = document.getElementById("mobile").value;
     var email = document.getElementById("email").value;
-    var user_name = document.getElementById("uname").value;
+    var user_name = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     var confirm_password = document.getElementById("confirm").value;
     let user_details = {
@@ -43,8 +43,24 @@ function register(){
         return false;
     }
     else{
-        console.log(user_details);
-        alert("sucessfull registered");        
-        window.location.href = "login.html"
+        console.log(user_details);             
+        let url ="https://product-mock-api.herokuapp.com/flightapp/api/v1/auth/register";
+        let formData ={
+            name: name,
+            mobilenumber:mobile_number,
+            email:email,
+            username:user_name,
+            password:password,
+            confirm_password: confirm_password
+        };
+        axios.post(url, formData).then(res=>{            
+            let data = res.data;
+            console.log(data);
+            alert("Successffully Register");
+            window.location.href = "login.html"
+        }).catch(err=>{
+            console.error(err);
+            alert("Unable to register");
+        });
     }
 }
