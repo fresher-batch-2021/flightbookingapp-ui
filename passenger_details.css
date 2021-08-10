@@ -7,11 +7,8 @@ body
     font-family: serif;  
     color: white;
 }  
-.airline{
-    text-align: center;
-    background-color: #04AA6D;    
-    padding: 10px;
-}
+
+
 .page_title{
     color: black;
     text-align: left;

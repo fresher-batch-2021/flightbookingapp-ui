@@ -11,72 +11,73 @@
 </head>
 
 <body>
-    <div class="airline">
-        <header>
-            <h1>Airline</h1>
-        </header>
-        <br>
-    </div>
-    <aside class="aside">
-        <div class="second_heading">
-            <h2>Passenger details </h2>
+    <header id="header"></header>
+    <script src="jquery.min.js"></script>
+    <script>
+        $("#header").load("header.html")
+    </script>
+    <br>
+    <main>
+        <aside class="aside">
+            <div class="second_heading">
+                <h2>Passenger details </h2>
+            </div>
+
+            <table id="passenger_table">
+                <thead>
+                    <tr>
+                        <th scope="row">Name</th>
+                        <th scope="row">Age</th>
+                        <th scope="row">Gender</th>
+                    </tr>
+                </thead>
+                <tbody id="passenger_tablebody">
+
+                </tbody>
+
+            </table>
+
+        </aside>
+
+        <div class="page_title">
+            <h2>Enter Passenger details</h2>
         </div>
-
-        <table id="passenger_table">
-            <thead>
-                <tr>
-                    <th scope="row">Name</th>
-                    <th scope="row">Age</th>
-                    <th scope="row">Gender</th>
-                </tr>
-            </thead>
-            <tbody id="passenger_tablebody">
-
-            </tbody>
-
-        </table>
-
-    </aside>
-
-    <div class="page_title">
-        <h2>Enter Passenger details</h2>
-    </div>
-    <div class="login">
-        <form onsubmit="passenger_validation()">
-            <label>
-                <strong>Name</strong>
-            </label>
-            <br>
-            <input type="text" name="name" id="name" placeholder="Name">
-            <br>
-            <br>
-            <label>
-                <strong>Age</strong>
-            </label>
-            <br>
-            <input type="text" name="age" id="age" placeholder="Age">
-            <br>
-            <br>
-            <label><strong>Gender</strong></label>
-            <select name="gender" id="gender" required>]
-                <option value="select">Select</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="others">Others</option>
-            </select>
-            <br>
-            <br>
-            <br>
-            <input type="submit" name="log" id="booking" value="Add passenger">
-            <br>
-            <br>
-        </form>
-    </div>
-    <div>
-        <form action="index.html" onsubmit="registration_successful()">
-            <input type="submit" value="Book Now" class="booking_button">
-        </form>
-    </div>
-
+        <div class="login">
+            <form onsubmit="passenger_validation()">
+                <label>
+                    <strong>Name</strong>
+                </label>
+                <br>
+                <input type="text" name="name" id="name" placeholder="Name">
+                <br>
+                <br>
+                <label>
+                    <strong>Age</strong>
+                </label>
+                <br>
+                <input type="text" name="age" id="age" placeholder="Age">
+                <br>
+                <br>
+                <label><strong>Gender</strong></label>
+                <select name="gender" id="gender" required>]
+                    <option value="select">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <input type="submit" name="log" id="booking" value="Add passenger">
+                <br>
+                <br>
+            </form>
+        </div>
+        <div>
+            <form action="index.html" onsubmit="registration_successful()">
+                <input type="submit" value="Book Now" class="booking_button">
+            </form>
+        </div>
+    </main>
 
 </html>

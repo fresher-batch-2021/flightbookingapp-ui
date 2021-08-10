@@ -1,6 +1,13 @@
 .airline{
     text-align: center;
     background-color: #04AA6D;    
-    padding: 10px;
+    padding: 20px;
     color: white;
+    
+}
+.heading{
+    
+    color:white;
+    font-size: 40px;
+    text-decoration: none;
 }

@@ -16,9 +16,10 @@
     <script>
         $("#header").load("header.html")
     </script>
+    
     <br>
 
-    </div>
+    <main>
     <div class="depature_information">
         <h2>Departure Information</h2>
     </div>
@@ -38,22 +39,22 @@
                     </tr>
                     <tr>
                         <td>4000</td>
-                        <td>chennai</td>
-                        <td>mumbai</td>
+                        <td id="from"></td>
+                        <td id="to"></td>
                         <td>₹5200</td>
                         <td><button type="submit" value="submit">Book now</button></td>
                     </tr>
                     <tr>
                         <td>4001</td>
-                        <td>chennai</td>
-                        <td>mumbai</td>
+                        <td id="from_1"></td>
+                        <td id="to_1"></td>
                         <td>₹5100</td>
                         <td><button type="submit" value="submit">Book now</button></td>
                     </tr>
                     <tr>
                         <td>4002</td>
-                        <td>chennai</td>
-                        <td>mumbai</td>
+                        <td id="from_2"></td>
+                        <td id="to_2"></td>
                         <td>₹5300</td>
                         <td><button type="submit" value="submit">Book now</button></td>
                     </tr>
@@ -62,6 +63,18 @@
             </form>
         </fieldset>
     </div>
+    <script>
+        let user_details = JSON.parse(localStorage.getItem('flight_details'));
+        console.log(user_details);
+        document.querySelector("#from").innerHTML =user_details.from;
+        document.querySelector("#to").innerHTML = user_details.to;        
+        document.querySelector("#from_1").innerHTML =user_details.from;
+        document.querySelector("#to_1").innerHTML = user_details.to;
+        document.querySelector("#from_2").innerHTML =user_details.from;
+        document.querySelector("#to_2").innerHTML = user_details.to;        
+
+    </script>
+    </main>
 
 </body>
 

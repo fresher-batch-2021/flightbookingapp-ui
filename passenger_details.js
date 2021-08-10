@@ -34,7 +34,7 @@ function passenger_details(){
     row.appendChild(table_data_name);
     row.appendChild(table_data_age);
     row.appendChild(table_data_gender);
-    tableBody.append(row);
+    tableBody.append(row);    
      
     return false;
 }
