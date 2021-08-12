@@ -44,9 +44,9 @@ function passenger_details(){
 
 
     //set passengers details
-    passengerName = document.getElementById("name").value;
-    passengerAge = document.getElementById("age").value;
-    passengerGender = document.getElementById("gender").value;
+    var passengerName = document.getElementById("name").value;
+    var passengerAge = document.getElementById("age").value;
+    var passengerGender = document.getElementById("gender").value;
     var passengerObj = { "name" : passengerName , "age": passengerAge, "gender":passengerGender}    
     
     let usersStr = localStorage.getItem("PASSENGERS");
