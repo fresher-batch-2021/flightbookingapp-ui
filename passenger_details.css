@@ -7,7 +7,27 @@ body
     font-family: serif;  
     color: white;
 }  
-
+.header{
+    float: right;
+    padding-right: 15px;
+    font-size: 18px;
+}
+.nav_item{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8);    
+    color: white;
+    
+}
+.nav_item:hover{
+    background-color:#04AA6D ;
+}
 
 .page_title{
     color: black;
@@ -24,7 +44,7 @@ body
         padding: 40px;  
         background: rgba(0, 0, 0, 0.8);  
         border-radius: 15px ;
-        border:2px solid black;
+        border:1px solid black;
         height: 250px;
           
           

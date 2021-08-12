@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>passenger details</title>
     <link rel="stylesheet" href="passenger_details.css">
-    <script src="passenger_details.js"></script>
+    
 </head>
 
 <body>
@@ -16,14 +16,25 @@
     <script>
         $("#header").load("header.html")
     </script>
-    <br>
+    <header>
+        <div class="header">
+            <a class="nav_item" href="homepage.html">
+                <strong id="username">Username</strong>
+            </a>&nbsp;
+            <a class="nav_item" onclick="logout()">
+                <strong>Logout</strong>
+            </a> 
+
+        </div>
+    </header>
     <main>
+        <br>
         <aside class="aside">
             <div class="second_heading">
                 <h2>Passenger details </h2>
             </div>
 
-            <table id="passenger_table">
+            <table id="passenger_table" >
                 <thead>
                     <tr>
                         <th scope="row">Name</th>
@@ -78,7 +89,14 @@
                 <input type="submit" value="Book Now" class="booking_button">
             </form>
         </div>
-        
+        <script src="passenger_details.js"></script>
+        <script>
+            let user_details = JSON.parse(localStorage.getItem('user'));
+            console.log(user_details);
+            document.querySelector("#username").innerHTML = user_details.username;
+            
+        </script>
+
     </main>
 
 </html>

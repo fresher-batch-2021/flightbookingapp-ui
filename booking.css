@@ -3,7 +3,28 @@ body{
     color: white;
     padding: 0;
     margin:auto;
-    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.header{
+    float: right;
+    padding-right: 15px;
+    font-size: 18px;
+}
+.nav_item{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8);    
+    color: white;
+    
+}
+.nav_item:hover{
+    background-color:#04AA6D ;
 }
 .depature_information{
     text-align: center;
@@ -14,21 +35,17 @@ body{
     text-align: center;
     color: black;
     display: inline;
-    margin-left: 170px;
+    
     
 }
 #depature_date{
     margin: 10px;
 }
-.airline{
-    text-align: center;
-    background-color: #04AA6D;
-    
-    padding: 10px;
-}
+
+
 .fieldset_table{
     background: rgba(0, 0, 0, 0.5); 
-    width: 1000px;    
+    width: 100%;    
     margin: auto;
 }
         
@@ -38,25 +55,28 @@ body{
     padding: 20px;
     tab-size: 500px;
     width: 100%;
-    text-align: left;
-    border-collapse: collapse;
-    
+    text-align: center;
+    border-collapse: collapse;      
     
 }
-.depature_table tr:hover{
+.depature_table tr{
+    height: 50px;
+}
+.depature_table tbody tr:hover{
     background-color: white;
     color: black;
 }
 .depature_table th{
     padding-top: 12px;
     padding-bottom: 12px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0);
+    
     
 }
 .depature_table button{
     width: 100%;
     font-size: 20px;
-    height: 40px;
+    height: 50px;
     border: none;
     background-color: #04AA6D;
 }

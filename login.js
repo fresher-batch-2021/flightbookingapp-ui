@@ -10,7 +10,7 @@ function login_validation(){
     axios.post(url, formData).then(res=>{            
         let data = res.data;
         console.log(data);
-        alert("Successffully Login");
+        alert("Successfully Login");
         passing_username();
         window.location.href = "homepage.html"
     }).catch(err=>{

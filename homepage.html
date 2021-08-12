@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="homepage.css">
     <script src="homepage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -20,10 +23,12 @@
     <main>
         <header>
             <div class="header">
-                <a class="nav_item" href="login.html">
+                <a class="nav_item" href="homepage.html">
                     <strong id="username">Username</strong>
-                </a>
-                
+                </a>&nbsp;
+                <a class="nav_item" onclick="logout()">
+                    <strong>Logout</strong>
+                </a>                
             </div>
         </header>
         <br>
@@ -34,7 +39,7 @@
                 <em>direction:</em>
             </h1>
             <br>
-            <form action="booking.html" onsubmit="passing_data()">
+            <form onsubmit="passing_data()">
                 <div class="col">
                     <span>
                         <label for="from"><strong>FROM:</strong></label>
