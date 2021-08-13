@@ -59,7 +59,7 @@ function passenger_details(){
     console.log(passengers);
     
     if ( passengers.length >4){
-        alert("Max only 2 passengers")
+        alert("Maximum only 4 passengers")
         return false;
     }else{
         localStorage.setItem("PASSENGERS", JSON.stringify(passengers));     
