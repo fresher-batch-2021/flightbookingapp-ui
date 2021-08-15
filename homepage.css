@@ -72,7 +72,7 @@ label{
     min-height: 1px;
     padding: 15px;
     padding-right: 15px;    
-    display: inline ;
+    display: inline-block ;
 }
 
 .return_date{
@@ -87,7 +87,7 @@ label{
 }  
 .order_ticket{
     font-family:  sans-serif;
-    margin-left: auto;
+    margin-left: 80px;
     margin-top: 10px;
     width: 200px;  
     height: 50px;  
@@ -95,6 +95,7 @@ label{
     border-radius: 4px;  
     padding-left: 7px;  
     color:black;
+    
 }
 .order_ticket:hover{
     background: #04AA6D;
