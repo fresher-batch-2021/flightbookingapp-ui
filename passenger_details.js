@@ -51,7 +51,7 @@ function passenger_details(){
     
     let usersStr = localStorage.getItem("PASSENGERS");
     console.log(usersStr);
-    // if users data available in localStorage, then do parse else assign an empty array
+
 
     let passengers = usersStr != null ? JSON.parse(usersStr): []; 
     console.log(passengers);
