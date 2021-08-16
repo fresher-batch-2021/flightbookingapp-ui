@@ -14,6 +14,27 @@ body{
     border-radius: 15px ;
     border:5px solid white;
 }
+.header{
+    float: right;
+    padding-right: 15px;
+    font-size: 18px;
+}
+.nav_item{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8);    
+    color: white;
+    
+}
+.nav_item:hover{
+    background-color:#04AA6D ;
+}
 .flight_name{
     margin: 0;
     text-align : center;

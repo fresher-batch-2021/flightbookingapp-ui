@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="ticket.css">
+    <script src="ticket.js"></script>
 </head>
 <body>
     <header id="header"></header>
@@ -13,6 +14,17 @@
     <script>
         $("#header").load("header.html")
     </script>
+    <header>
+        <div class="header">
+            <a class="nav_item" href="homepage.html">
+                <strong id="username">Username</strong>
+            </a>&nbsp;
+            <a class="nav_item" onclick="logout()">
+                <strong>Logout</strong>
+            </a> 
+
+        </div>
+    </header>
     <header>
         <div class="ticket">
             <div class = "flight_name">

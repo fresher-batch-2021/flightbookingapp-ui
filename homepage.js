@@ -11,20 +11,24 @@ function passing_data() {
     console.log("to", to);
     localStorage.setItem('depature_date', JSON.stringify(depature_date));
 
-    let url = "https://product-mock-api.herokuapp.com/flightapp/api/v1/flights";
+    let url ="https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/add_flight/_all_docs?include_docs=true";
+    const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
+    const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
+    const basicAuth = 'Basic '  + btoa(dbusername+ ":" +dbpassword);
        
-    axios.get(url).then(res => {
-        const users = res.data;
-        console.log(users);
+    axios.get(url, { headers: {'Authorization': basicAuth}}).then(res => {
+        let data = res.data.rows;
+    const users = data.map(obj=>obj.doc);
+    console.log(users);
+     alert("1");   
+    var results = users.filter(obj => obj.source == from && obj.destination == to);
         
-        var results = users.filter(obj => obj.source == from && obj.destination == to);
-        
-        console.log(results);        
-        localStorage.setItem('flight_details', JSON.stringify(results));
+    console.log(results);        
+    localStorage.setItem('flight_details', JSON.stringify(results));
         
         
         
-        window.location.href = "booking.html"
+    window.location.href = "booking.html"
 
     })
 
