@@ -71,6 +71,8 @@ function passenger_details(){
 displayPassengerDetails();
 function registration_successful(){
     alert("Successfully Booked");
+    window.location.href = "ticket.html"
+
 }
 
 function logout(){

@@ -38,8 +38,7 @@ body
 
 .login{  
         width: 310px;  
-        overflow: hidden;  
-          
+        overflow: hidden;           
         margin-left: 50px;  
         padding: 40px;  
         background: rgba(0, 0, 0, 0.8);  

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+    <header id="header"></header>
+    <script src="jquery.min.js"></script>
+    <script>
+        $("#header").load("header.html")
+    </script>
+    <header>
+        <div class="ticket">
+            <div class = "flight_name">
+            <h1 id="flight_name">Flight Name</h1>
+            </div>
+            <div class="destination">
+                <div class="from">
+                <label for="from">From: </label>
+                <label id="from"></label>
+                <label id="from_time">(00:00)</label>
+                </div>
+                <div class="to">
+                <label for="to">To: </label>
+                <label id="to"></label>
+                <label id="to_time">(00:00)</label>
+                </div>
+            </div>
+            <br><br>
+            <div class="destination_date">
+                <label>Destination Date:</label>
+                <label id = "depature_date"></label>
+            </div>
+            <br>
+            <div class="passenger_details">
+                <label>Passenger Details:</label>              
+
+            </div>
+            <div>
+                <table class="passenger_table">
+                    <caption></caption>
+                    <thead>
+                        <tr>
+                            <th id="#">Name</th>
+                            <th id="#">Age</th>
+                            <th id="#">Gender</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="task_table"></tbody>
+                </table>
+            </div>
+        </div>
+    
+</body>
+</html>
+<script>
+     let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));     
+     console.log(flight_details);
+     document.querySelector("#flight_name").innerHTML = flight_details.flight_name;
+     document.querySelector("#from").innerHTML = flight_details.depature_from;
+     document.querySelector("#to").innerHTML = flight_details.destination;
+     document.querySelector("#from_time").innerHTML = flight_details.start_time;
+     document.querySelector("#to_time").innerHTML = flight_details.end_time;
+
+     let depature_date = JSON.parse(localStorage.getItem('depature_date'));     
+     console.log(depature_date);
+     document.querySelector("#depature_date").innerHTML = depature_date;
+
+     let passengers_details = JSON.parse(localStorage.getItem('PASSENGERS'));     
+     console.log(passengers_details);
+     let content = "";
+     for (task of passengers_details){
+         
+        content = content + `<tr><td>${task.name}</td><td>${task.age}</td><td>${task.gender}</td></tr>`;
+         
+     }
+     console.log(content);
+     document.querySelector("#task_table").innerHTML = content;
+</script>

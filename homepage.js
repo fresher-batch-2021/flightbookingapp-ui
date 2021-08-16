@@ -1,3 +1,4 @@
+data();
 function passing_data() {
     event.preventDefault();
 
@@ -11,13 +12,13 @@ function passing_data() {
     localStorage.setItem('depature_date', JSON.stringify(depature_date));
 
     let url = "https://product-mock-api.herokuapp.com/flightapp/api/v1/flights";
-    alert("1");    
+       
     axios.get(url).then(res => {
         const users = res.data;
         console.log(users);
-        alert("1.1");        
+        
         var results = users.filter(obj => obj.source == from && obj.destination == to);
-        alert("1.2");
+        
         console.log(results);        
         localStorage.setItem('flight_details', JSON.stringify(results));
         
@@ -57,4 +58,3 @@ $(function(){
     $('.depature_date').attr('min', maxDate);
 });
 }
-data();
