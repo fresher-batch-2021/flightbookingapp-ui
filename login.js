@@ -6,12 +6,13 @@ function login_validation(){
     const basicAuth = 'Basic '  + btoa(dbusername+ ":" +dbpassword);
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
+    var role = document.getElementById("role").value
     let formData = {    
         selector:{      
         username: username,          
         password: password
         },
-        fields: ["_id", "name", "email"]   
+        fields: ["role"]   
     };
     axios.post(url, formData, {headers: { Authorization: basicAuth}}).then(res=>{            
         let data = res.data.docs;
@@ -19,16 +20,27 @@ function login_validation(){
         if(data.length == 0){
             alert("Invaild login credentials")
         }else{
-            const user = data[0];
-            alert("Successfully Login");
-            passing_username();
-            window.location.href = "homepage.html"
+        let constant = "";
+        for(let role of data){
+            constant = constant +  role;
+            console.log(role.role);
+            let domain = role.role;
+            console.log(domain)
+            if(domain == "user"){
+                alert("Successfully Login");
+                passing_username();
+                window.location.href = "homepage.html"
+            }else if(domain == "admin"){
+                alert("Successfully Login");
+                passing_username();
+                window.location.href = "flightlist.html"
+            }
+                        
+            
         }
-        
-    }).catch(err=>{
-        let errorMessage = err.response.data.errorMessage;
-        console.error(errorMessage);
-        alert("Error-" + errorMessage);
+        }    
+               
+ 
     });
     
 }   
