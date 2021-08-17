@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flight_list</title>
+    <link rel="stylesheet" href="flightlist.css">
+    <script src="flightlist.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <script src="jquery.min.js"></script>
+    <script>
+        $("#header").load("header.html")
+    </script>
+    <main>
+        
+        <div class="search">
+            <form  onsubmit="flight_data()">
+            <label for="from"><strong>From</strong></label>
+            <select name='from' class="from" required>
+                <option value="">Select a location...</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Hong Kong">Hong Kong</option>
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+                <option value="Korea">Korea</option>
+                <option value="Laos">Laos</option>
+                <option value="Myanmar">Myanmar</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Vietnam">Vietnam</option>
+            </select>
+            
+
+            <label for="to"><strong>To</strong></label>
+            <select name='to' class="to" required>
+                <option value="">Select a location...</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Hong Kong">Hong Kong</option>
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+                <option value="Korea">Korea</option>
+                <option value="Laos">Laos</option>
+                <option value="Myanmar">Myanmar</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Vietnam">Vietnam</option>
+            </select>
+
+            <button type="submit" class="search_button">Search</button>
+            </form>
+            <button type="submit" class="search_button" onclick="all_flights()">All Flights</button>
+
+        </div>
+        <div class="fieldset_table">
+
+            <form action="passenger_details.html">
+                <table class="depature_table">
+                    <caption></caption>
+                    <thead>
+                        <tr>
+                            <th id="#">Flight</th>
+                            <th id="#">From</th>
+                            <th id="#">To</th>
+                            <th id="#">Price</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="task_table"></tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>

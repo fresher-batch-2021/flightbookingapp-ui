@@ -29,6 +29,15 @@
             <img src="img/login.jfif" alt="user logo" class="logo">
             <form id="login" onsubmit="login_validation()">
                 <label>
+                    <strong>Role</strong>
+                </label>
+                <select name="role" id="role" required>
+                    <option value="null">select...</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">user</option>
+                </select>
+                <br><br>
+                <label>
                     <strong>User Name</strong>
                 </label>
                 <input type="text" name="username" id="username" placeholder="Username" required>

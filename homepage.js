@@ -20,7 +20,7 @@ function passing_data() {
         let data = res.data.rows;
     const users = data.map(obj=>obj.doc);
     console.log(users);
-     alert("1");   
+        
     var results = users.filter(obj => obj.source == from && obj.destination == to);
         
     console.log(results);        
@@ -37,8 +37,8 @@ function passing_data() {
 
 function logout(){
     localStorage.clear();
-    alert("succesfilly logout")
-    window.location.href = "index.html"
+    alert("succesfilly logout");
+    window.location.href = "index.html";
 }
 function date(){
 $(function(){

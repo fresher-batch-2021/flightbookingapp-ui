@@ -4,13 +4,15 @@ function register(){
     var mobile_number = document.getElementById("mobile").value;
     var email = document.getElementById("email").value;
     var user_name = document.getElementById("username").value;
+    var role = document.getElementById("role").value
     var password = document.getElementById("password").value;
     var confirm_password = document.getElementById("confirm").value;
     let user_details = {
         "Name": name,
         "Mobile_no": mobile_number,
         "Email": email,
-        "user name": user_name,        
+        "user name": user_name,   
+        "role": role,     
     }
 
     if(name=="" || name == null || name.trim ==""){
@@ -53,6 +55,7 @@ function register(){
             mobilenumber:mobile_number,
             email:email,
             username:user_name,
+            role:role,
             password:password,
             confirm_password: confirm_password
         };
