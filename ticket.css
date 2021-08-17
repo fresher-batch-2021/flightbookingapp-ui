@@ -6,8 +6,7 @@ body{
 .ticket{
     width: 510px;          
     margin: auto;
-    margin-top: 50px;
-    margin: 20 0 0 450px;
+    margin-top: 50px;    
     height: 450px;
     padding: 20px;  
     background: rgba(0, 0, 0, 0.8);  
