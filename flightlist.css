@@ -54,7 +54,8 @@ body{
     tab-size: 500px;
     width: 100%;
     text-align: center;
-    border-collapse: collapse;      
+    border-collapse: collapse;    
+    color: white;  
     
 }
 .depature_table tr{
