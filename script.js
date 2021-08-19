@@ -5,3 +5,10 @@ function passing_data() {
 
 
 }
+function setDate(){
+    alert("check");
+    let today = new Date().toJSON().substr(0,10);
+    document.querySelector("#depature").setAttribute("min", today);
+
+}
+setDate();
