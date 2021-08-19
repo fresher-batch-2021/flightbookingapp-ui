@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="addflight.js"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <script src="jquery.min.js"></script>
+    <script>
+        $("#header").load("header.html")
+    </script>
+    <main>
+        <div class="heading">
+            <h2>Adding Flight Details</h2>
+        </div>
+        <br>
+        <div class="login">
+            
+            <form id="login" onsubmit="add_flight()">
+                <label>
+                    <strong>Flight Name</strong>
+                </label>
+                <br>
+                <input type="text" name="name" id="name" pattern="[A-Za-z]{1,32}" required autocomplete="off">
+                <br>
+                <br>
+                <label>
+                    <strong>From</strong>
+                </label>
+                <select name='from' class="destination" id = "destination" required>
+                    <option value="">Select a location...</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Hong Kong">Hong Kong</option>
+                    <option value="India">India</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Korea">Korea</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Vietnam">Vietnam</option>
+                </select>
+                <br>
+                <br>
+                
+                <label for="to"><strong>TO</strong></label>
+                        <select name='to' class="source" id="source" required>
+                            <option value="">Select a location...</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Hong Kong">Hong Kong</option>
+                            <option value="India">India</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Korea">Korea</option>
+                            <option value="Laos">Laos</option>
+                            <option value="Myanmar">Myanmar</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Vietnam">Vietnam</option>
+                        </select>
+                <br>
+                <br>
+                <label>
+                    <strong>StartTime</strong>
+                </label>
+                <input type="time" name="startTime" id="startTime" required >
+                <br>
+                <br>
+                <label>
+                    <strong>EndTime</strong>
+                </label>
+                <input type="time" name="endTime" id="endTime" required >
+                <br>
+                <br>
+                <label>
+                    <strong>Price</strong>
+                </label>
+                <input type="number" name="price" id="price" max="99999"  required autocomplete="off">
+                <br><br><br>
+                <input type="submit" name="log" id="log" value="Add Flight">
+                <br>
+                <br>
+                <button onclick="back()">Back</button>
+
+            </form>
+        </div>
+    </main>
+</body>
+<script src="addflight.js"></script>
+
+</html>

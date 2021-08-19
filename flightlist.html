@@ -17,6 +17,17 @@
     <script>
         $("#header").load("header.html")
     </script>
+    <header>
+        <div class="header">
+            <a class="nav_item">
+                <strong id="username">Username</strong>
+            </a>&nbsp;
+            <a class="nav_item" onclick="logout()">
+                <strong>Logout</strong>
+            </a> 
+
+        </div>
+    </header>
     <main>
         
         <div class="search">
@@ -55,7 +66,7 @@
             <button type="submit" class="search_button">Search</button>
             </form>
             <button type="submit" class="search_button" onclick="all_flights()">All Flights</button>
-            
+            <button type="submit" class="search_button" onclick="addflight()">Add Flights</button>
 
         </div>
         <div class="fieldset_table">
@@ -69,7 +80,7 @@
                             <th id="#">From</th>
                             <th id="#">To</th>
                             <th id="#">Price</th>
-                            <th id="#">cancel</th>
+                            <th id="#">Cancel</th>
                             
                         </tr>
                     </thead>
@@ -78,6 +89,12 @@
             </form>
         </div>
     </main>
+    <script>
+        let user_details = JSON.parse(localStorage.getItem('user'));
+        console.log(user_details);
+        document.querySelector("#username").innerHTML = user_details.username;
+        
+    </script>
     
 </body>
 </html>

@@ -3,6 +3,24 @@ body{
     padding: 0;
     font-size: 20px;
 }
+.header{
+    float: right;
+    padding-right: 15px;
+    font-size: 18px;
+}
+.nav_item{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8);    
+    color: white;
+    
+}
 .search{
     
     
@@ -29,15 +47,13 @@ body{
 }
 .from{
     width: 300px;  
-    height: 30px;  
-      
+    height: 30px;        
     border-radius: 3px;  
     padding-left: 8px;
 }
 .to{
     width: 300px;  
-    height: 30px;  
-     
+    height: 30px;       
     border-radius: 3px;  
     padding-left: 8px;
 }

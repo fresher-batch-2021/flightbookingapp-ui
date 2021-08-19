@@ -68,3 +68,14 @@ function cancel_flight(id,rev){
     })
     
 }
+
+function addflight(){
+    window.location.href = "add_flight.html"
+
+}
+
+function logout(){
+    localStorage.clear();
+    alert("succesfilly logout")
+    window.location.href = "index.html"
+}

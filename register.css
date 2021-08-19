@@ -101,3 +101,49 @@ label{
        
 
 }
+
+
+#destination{
+    position: relative;
+    min-height: 1px;
+    
+    padding-right: 15px;   
+    width: 310px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;   
+}
+#source{
+    position: relative;
+    min-height: 1px;
+    
+    padding-right: 15px;   
+    width: 310px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;   
+
+}
+#startTime{
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;
+}
+#endTime{
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;
+}
+#price{
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;
+}
