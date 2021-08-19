@@ -41,7 +41,7 @@ function logout(){
     window.location.href = "index.html";
 }
 function setDate(){
-    alert("check");
+    
     let today = new Date().toJSON().substr(0,10);
     document.querySelector("#depature").setAttribute("min", today);
 
