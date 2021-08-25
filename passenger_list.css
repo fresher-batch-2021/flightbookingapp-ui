@@ -62,7 +62,7 @@ body{
     margin: auto;
     font-size: 25px;    
     tab-size: 500px;
-    width: 50%;
+    width: 70%;
     text-align: center;
     border: 1px solid #ddd;
     padding: 8px;
@@ -93,4 +93,11 @@ body{
     margin: auto;
     color: black;
     
+}
+.back_button{
+    float: right;
+    margin-right: 20px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
 }

@@ -37,7 +37,8 @@
             <label><strong>Flight Name:</strong></label>
             <select name='flight_name' class="flight_name" required>
                 <option value="">Select Flight...</option>
-                <option value="AirIndia">AirIndia</option>                
+                <option value="AirIndia">AirIndia</option>
+                <option value="SpiceJet">SpiceJet</option>                
             </select>
             
             <label for="departure"><strong>Depature date:</strong></label>
@@ -51,15 +52,18 @@
             <thead>
                 <tr>
                     <th id="#">S.No</th>
-                    <th id="#">Name</th>
-                    <th id="#">Age</th>
-                    <th id="#">Gender</th>
+                    <th id="#">Userame</th>
+                    <th id="#">From</th>
+                    <th id="#">To</th>
+                    <th id="#">No.of.passenger</th>
+                    <th id="#">Ticket fare</th>
+                    <th id="#">Total fare</th>
                     
                 </tr>
             </thead>
             <tbody id="task_table"></tbody>
         </table>
-        <button onclick="back()">Back</button>
+        <button onclick="back()" class="back_button">Back</button>
     </main>
     <script>
         let user_details = JSON.parse(localStorage.getItem('user'));

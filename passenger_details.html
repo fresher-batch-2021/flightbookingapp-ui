@@ -103,6 +103,25 @@
             </form>
         </div>
         <div>
+            <div class="passenger_fare">
+                
+                <p>No of Passengers: &nbsp; <span id="passenger_count"></span></p>
+                
+                <p>Ticket Fare: &nbsp; <span id="ticket_fare"></span></p>
+                
+                <p>Total fare: &nbsp; <span id="total_fare"></span></p>
+                
+                
+               
+                    <!-- <th>No of Passengers</th>
+                    <td id="passenger_count"></td>
+                    <th>Ticket Fare</th>
+                    <td id="ticket_fare"></td>
+                    <th>Total fare</th>
+                    <td id="total_fare"></td> -->
+                              
+
+            </div>
             <form  >
                 <input type="button" value="Book Now" class="booking_button" onclick="registration_successful()">
             </form>
@@ -118,6 +137,7 @@
             document.querySelector("#flight_name").innerHTML = flight_details.flight_name;
             document.querySelector("#from").innerHTML = flight_details.depature_from;
             document.querySelector("#to").innerHTML = flight_details.destination;
+            document.querySelector("#ticket_fare").innerHTML = flight_details.price;
 
 
             let depatute_date = JSON.parse(localStorage.getItem('depature_date'));
