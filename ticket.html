@@ -57,6 +57,7 @@
                     <caption></caption>
                     <thead>
                         <tr>
+                            <th id="#">S.No</th>
                             <th id="#">Name</th>
                             <th id="#">Age</th>
                             <th id="#">Gender</th>
@@ -71,6 +72,10 @@
 </body>
 </html>
 <script>
+    let user_details = JSON.parse(localStorage.getItem('user'));
+    console.log(user_details);
+    document.querySelector("#username").innerHTML = user_details.username;
+
      let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));     
      console.log(flight_details);
      document.querySelector("#flight_name").innerHTML = flight_details.flight_name;
@@ -86,9 +91,10 @@
      let passengers_details = JSON.parse(localStorage.getItem('PASSENGERS'));     
      console.log(passengers_details);
      let content = "";
+     let i = 0;
      for (task of passengers_details){
-         
-        content = content + `<tr><td>${task.name}</td><td>${task.age}</td><td>${task.gender}</td></tr>`;
+         i++;
+        content = content + "<tr><td>"+ i +"</td><td>" + task.name + "</td><td>" + task.age + "</td><td>" + task.gender + "</td></tr>";
          
      }
      console.log(content);

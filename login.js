@@ -12,7 +12,7 @@ function login_validation(){
         username: username,          
         password: password
         },
-        fields: ["role"]   
+        fields: ["role","_id","username"]   
     };
     axios.post(url, formData, {headers: { Authorization: basicAuth}}).then(res=>{            
         let data = res.data.docs;
@@ -21,8 +21,9 @@ function login_validation(){
             alert("Invaild login credentials")
         }else{
         let constant = "";
+        localStorage.setItem("Logged_in_users",JSON.stringify(data));
         for(let role of data){
-            constant = constant +  role;
+            constant = constant +  role;            
             console.log(role.role);
             let domain = role.role;
             console.log(domain)

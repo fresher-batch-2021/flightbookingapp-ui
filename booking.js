@@ -6,6 +6,8 @@ function logout(){
 
 function bookNow(name,source,startTime,destination,endTime,price){
     console.log(name,source,startTime,destination,endTime,price);
+    let depatute_date = JSON.parse(localStorage.getItem('depature_date'));
+    console.log(depatute_date);
     
     
     let booked_flight = {
@@ -15,6 +17,7 @@ function bookNow(name,source,startTime,destination,endTime,price){
         "destination":destination,
         "end_time":endTime,
         "price":price,
+        "date":depatute_date,
     }
     console.log(booked_flight);
     localStorage.setItem('booked_flight_details',JSON.stringify(booked_flight)); 

@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>passenger details</title>
     <link rel="stylesheet" href="passenger_details.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
 </head>
 
@@ -29,6 +32,18 @@
     </header>
     <main>
         <br>
+        <table id="flight_table">
+            <tr>
+                <th>Flight Name:</th>
+                <td id="flight_name"></td>
+                <th>From:</th>
+                <td id="from"></td>
+                <th>To:</th>
+                <td id="to"></td>
+                <th>Depature date</th>
+                <td id="depature_date"></td>
+            </tr>
+        </table>
         <aside class="aside">
             <div class="second_heading">
                 <h2>Passenger details </h2>
@@ -38,6 +53,7 @@
                 <caption></caption>
                 <thead>
                     <tr>
+                        <th scope="row">S.NO</th>
                         <th scope="row">Name</th>
                         <th scope="row">Age</th>
                         <th scope="row">Gender</th>
@@ -86,8 +102,8 @@
             </form>
         </div>
         <div>
-            <form action="ticket.html" onsubmit="registration_successful()">
-                <input type="submit" value="Book Now" class="booking_button">
+            <form  >
+                <input type="button" value="Book Now" class="booking_button" onclick="registration_successful()">
             </form>
         </div>
         <script src="passenger_details.js"></script>
@@ -95,9 +111,21 @@
             let user_details = JSON.parse(localStorage.getItem('user'));
             console.log(user_details);
             document.querySelector("#username").innerHTML = user_details.username;
+
+            let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));     
+            console.log(flight_details);
+            document.querySelector("#flight_name").innerHTML = flight_details.flight_name;
+            document.querySelector("#from").innerHTML = flight_details.depature_from;
+            document.querySelector("#to").innerHTML = flight_details.destination;
+
+
+            let depatute_date = JSON.parse(localStorage.getItem('depature_date'));
+            console.log(depatute_date);
+            document.querySelector("#depature_date").innerHTML = depatute_date;
             
         </script>
 
     </main>
+    </body>
 
 </html>
