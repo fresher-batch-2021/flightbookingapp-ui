@@ -77,12 +77,13 @@ body{
 }
 
 .passenger_table th{
+    padding: 8px;
     padding-top: 12px;
     padding-bottom: 12px;
     background-color: rgba(0, 0, 0, 0.8); 
     color: white;
     border: 1px solid #ddd;
-    padding: 8px;
+    
 }   
 .passenger_table td{
     border: 1px solid #ddd;
