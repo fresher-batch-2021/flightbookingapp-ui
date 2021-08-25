@@ -59,7 +59,7 @@ body{
     display: inline;
 }
 .passenger_table{
-    margin: auto;
+    
     font-size: 25px;    
     tab-size: 500px;
     width: 70%;
@@ -96,8 +96,24 @@ body{
 }
 .back_button{
     float: right;
+    margin-top: 20%;
     margin-right: 20px;
     font-size: 18px;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
+}
+aside {
+    width: 25%;
+    height: 320px;
+    padding-left: 15px;
+    margin-top: 40px;
+    margin-right: 0px;
+    float: right;
+    font-size: 20px;    
+   
+}
+#passenger_details, tr,td,th{
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    color: black;
 }
