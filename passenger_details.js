@@ -24,7 +24,7 @@ function passenger_validation() {
 
 function displayPassengerDetails() {
 
-    let usersStr = localStorage.getItem("PASSENGERS");
+    let usersStr = localStorage.getItem("passengers");
     console.log(usersStr);
     // if users data available in localStorage, then do parse else assign an empty array
 
@@ -56,7 +56,7 @@ function passenger_details() {
     var passengerObj = { "name": passengerName, "age": passengerAge, "gender": passengerGender }
 
     
-    let usersStr = localStorage.getItem("PASSENGERS");
+    let usersStr = localStorage.getItem("passengers");
     console.log(usersStr);
 
 
@@ -71,7 +71,7 @@ function passenger_details() {
         return false;
     } else {
      
-        localStorage.setItem("PASSENGERS", JSON.stringify(passengers));
+        localStorage.setItem("passengers", JSON.stringify(passengers));
         displayPassengerDetails();
 
         
@@ -94,7 +94,7 @@ function registration_successful() {
 
     
 
-    let usersStr = localStorage.getItem("PASSENGERS");
+    let usersStr = localStorage.getItem("passengers");
     console.log(usersStr);
 
 
@@ -120,7 +120,7 @@ function registration_successful() {
             let data = res.data;
             console.log(data);            
         alert("Successfully Booked");
-        // window.location.href = "ticket.html"
+        window.location.href = "ticket.html"
 
     })
     }
@@ -132,6 +132,6 @@ function registration_successful() {
 
 function logout() {
     localStorage.clear();
-    alert("succesfilly logout")
+    alert("succesfully logout")
     window.location.href = "index.html"
 }

@@ -37,7 +37,7 @@ function passing_data() {
 
 function logout(){
     localStorage.clear();
-    alert("succesfilly logout");
+    alert("succesfully logout");
     window.location.href = "index.html";
 }
 function setDate(){

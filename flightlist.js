@@ -81,6 +81,6 @@ function passenger_list(){
 
 function logout(){
     localStorage.clear();
-    alert("succesfilly logout")
+    alert("succesfUlly logout")
     window.location.href = "index.html"
 }
