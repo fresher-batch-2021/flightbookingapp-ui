@@ -1,8 +1,4 @@
-function logout(){
-    localStorage.clear();
-    alert("succesfully logout")
-    window.location.href = "index.html"
-}
+
 
 function bookNow(name,source,startTime,destination,endTime,price){
     console.log(name,source,startTime,destination,endTime,price);

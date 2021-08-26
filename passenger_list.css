@@ -117,3 +117,10 @@ aside {
     border-collapse: collapse;
     color: black;
 }
+.passenger_table button{
+    width: 100%;
+    font-size: 20px;
+    height: 50px;
+    border: none;
+    background-color: #04AA6D;
+}

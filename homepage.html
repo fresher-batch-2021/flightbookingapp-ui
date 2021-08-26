@@ -21,16 +21,7 @@
         $("#header").load("header.html")
     </script>
     <main>
-        <header>
-            <div class="header">
-                <a class="nav_item" href="homepage.html">
-                    <strong id="username">Username</strong>
-                </a>&nbsp;
-                <a class="nav_item" onclick="logout()">
-                    <strong>Logout</strong>
-                </a>                
-            </div>
-        </header>
+       
         <br>
         <br>
         <fieldset class="fieldset">
@@ -79,7 +70,7 @@
                 <br><br><br><br><br>
                 <div class="date">
                     <label for="departure"><strong>DEPATURE DATE:</strong></label>
-                    <input type="date" name="depature" id="depature" class="depature_date" >
+                    <input type="date" name="depature" id="depature" class="depature_date" required >
                 </div>
                 <div class="date">
                     <div class="align">
@@ -91,12 +82,7 @@
 
             </form>
         </fieldset>
-        <script>            
-            let user_details = JSON.parse(localStorage.getItem('user'));
-            console.log(user_details);
-            document.querySelector("#username").innerHTML = user_details.username;           
-
-        </script>
+        
         <script src="homepage.js"></script>
     </main>
 </body>

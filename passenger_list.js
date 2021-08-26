@@ -1,7 +1,6 @@
 function flight_data(){
-    event.preventDefault();
+    event.preventDefault(); 
     
-
     let flight_name = document.querySelector(".flight_name").value;
     let booking_date = document.querySelector(".depature_date").value;
     console.log(booking_date);

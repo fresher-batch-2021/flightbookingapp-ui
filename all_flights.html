@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All flights</title>
+    <link rel="stylesheet" href="all_flights.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header id="admin_header"></header>
+    <script src="jquery.min.js"></script>
+    <script>
+        $("#admin_header").load("admin_header.html")
+    </script>
+    <header>
+        <h1 id="heading">Airline Flights</h1>
+        <div class="fieldset_table">
+
+            <form>
+                <table class="depature_table">
+                    <caption></caption>
+                    <thead>
+                        <tr>
+                            <th id="#">Flight</th>
+                            <th id="#">From</th>
+                            <th id="#">To</th>
+                            <th id="#">Price</th>
+                            <th id="#">Cancel</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="task_table"></tbody>
+                </table>
+            </form>
+        </div>
+        <script src="all_flights.js"></script>
+</body>
+</html>

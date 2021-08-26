@@ -35,11 +35,6 @@ function passing_data() {
 }
 
 
-function logout(){
-    localStorage.clear();
-    alert("succesfully logout");
-    window.location.href = "index.html";
-}
 function setDate(){
     
     let today = new Date().toJSON().substr(0,10);
