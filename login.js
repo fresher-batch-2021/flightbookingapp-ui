@@ -24,7 +24,7 @@ function login_validation(){
 
         localStorage.setItem("logged_in_users",JSON.stringify(data));
         // for(let role of data){
-            alert("i")
+            
             constant = constant +  data.role;            
             // console.log(role.role);
             let domain = data.role;

@@ -19,17 +19,7 @@
     <script>
         $("#header").load("header.html")
     </script>
-    <header>
-        <div class="header">
-            <a class="nav_item" href="homepage.html">
-                <strong id="username">Username</strong>
-            </a>&nbsp;
-            <a class="nav_item" onclick="logout()">
-                <strong>Logout</strong>
-            </a> 
-
-        </div>
-    </header>
+    
     <main>
         <br>
         <table id="flight_table">
@@ -130,7 +120,7 @@
         <script>
             let user_details = JSON.parse(localStorage.getItem('user'));
             console.log(user_details);
-            document.querySelector("#username").innerHTML = user_details.username;
+            // document.querySelector("#username").innerHTML = user_details.username;
 
             let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));     
             console.log(flight_details);
