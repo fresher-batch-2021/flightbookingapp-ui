@@ -4,15 +4,15 @@ body{
     font-size: 20px;
 }
 .header{
-    float: right;
-    padding-right: 15px;
+    float: left;
+    padding-left: 15px;
     font-size: 18px;
 }
 .nav_item{
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
     
     border: none;
     outline: none;
@@ -20,6 +20,9 @@ body{
     background-color: rgba(0, 0, 0, 0.8);    
     color: white;
     
+}
+.nav_item:hover{
+    background-color:#04AA6D ;
 }
 .search{
     

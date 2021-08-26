@@ -103,13 +103,14 @@ function registration_successful() {
     let to = flight_details.destination;
     let depature_date = flight_details.date;
 
-    let user_details = JSON.parse(localStorage.getItem('Logged_in_users'));
+    let user_details = JSON.parse(localStorage.getItem('logged_in_users'));
     console.log(user_details);
-    let user = "";
-    for(let value of user_details){
-        user = user+ value.username;
-    }
+    let user = user_details.username;
     console.log(user);
+    // for(let value of user_details){
+    //     user = user+ value.username;
+    // }
+    // console.log(user);
 
 
     let usersStr = localStorage.getItem("passengers");

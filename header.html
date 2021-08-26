@@ -5,7 +5,52 @@
     <div class="airline">
         
         <a href="index.html" class="heading"> Airline</a>
+
+        <li class="nav-item" data-loggedin="false">
+            <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item" data-loggedin="false">
+            <a class="nav-link" href="register.html">Register</a>
+        </li>
+       
+        <li class="nav-item" data-loggedin="true">
+            <a class="nav-link" href="#" onclick="logout()">Logout</a>
+        </li>
+        <li class="nav-item" data-loggedin="true">
+            <a class="nav-link" href="#" id="profile"> Welcome {{user.username}}</a>
+        </li>
         
     </div>
     
 </header>
+
+<script>
+    let user = JSON.parse(localStorage.getItem("logged_in_users"));
+    console.log("Header", user);
+    // for(let users of user){
+        console.log(user);
+
+        if (user != null) {
+        //if user is logged in, 
+        $(".nav-item[data-loggedin='true']").show();
+        $(".nav-item[data-loggedin='false']").hide();
+        $("#profile").html("Welcome " + user.username + "!!!");
+        if (user.role == "user") {
+            $(".nav-item[data-roles='admin']").hide();
+        }
+
+    } else {
+        //if user yet to logged in, 
+        $(".nav-item[data-loggedin='false']").show();
+        $(".nav-item[data-loggedin='true']").hide();
+    }
+
+        
+    // }
+    
+
+    function logout() {
+        localStorage.clear();
+        window.location.href = "login.html";
+    }
+</script>

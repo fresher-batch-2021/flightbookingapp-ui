@@ -1,5 +1,5 @@
 .airline{
-    text-align: center;
+    text-align: left;
     background-color: #04AA6D;    
     padding: 20px;
     color: white;
@@ -10,4 +10,17 @@
     color:white;
     font-size: 40px;
     text-decoration: none;
+}
+.nav-item{
+    display: inline;
+    float: right;
+    padding-top: 10px;
+    
+}
+.nav-item .nav-link{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    
 }

@@ -23,7 +23,7 @@ function flight_data(){
         if(user.flight_name == flight_name && user.date == booking_date){
             console.log("res",user);
             i++;
-            value = value + `<tr><td>${i}</td><td>${user.username}</td><td>${user.from}</td><td>${user.to}</td><td>${user.no_of_passengers}</td><td>${user.ticket_fare}</td><td>${user.total_fare}</td><td><button type='button' onclick = "passenger_details()">Passenger details</button></td></tr>` ;
+            value = value + `<tr><td>${i}</td><td>${user.username}</td><td>${user.from}</td><td>${user.to}</td><td>${user.no_of_passengers}</td><td>${user.ticket_fare}</td><td>${user.total_fare}</td><td><button type='button' onclick = "passenger_details('${user.username}')">Passenger details</button></td></tr>` ;
             
         }
         document.querySelector("#task_table").innerHTML = value;
@@ -49,7 +49,8 @@ function flight_data(){
     
 })
 }
-function passenger_details(){
+function passenger_details(username){
+    console.log(username);
     let flight_name = document.querySelector(".flight_name").value;
     let booking_date = document.querySelector(".depature_date").value;
     
@@ -66,7 +67,7 @@ function passenger_details(){
     let i = 0;
     for(let user of users)
     {
-        if(user.flight_name == flight_name && user.date == booking_date)
+        if(user.flight_name == flight_name && user.date == booking_date && user.username ==username)
         {
             console.log("res",user);
             

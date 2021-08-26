@@ -15,19 +15,22 @@ function login_validation(){
         fields: ["role","_id","username"]   
     };
     axios.post(url, formData, {headers: { Authorization: basicAuth}}).then(res=>{            
-        let data = res.data.docs;
+        let data = res.data.docs[0];
         console.log(data);
         if(data.length == 0){
             alert("Invaild login credentials")
         }else{
         let constant = "";
-        localStorage.setItem("Logged_in_users",JSON.stringify(data));
-        for(let role of data){
-            constant = constant +  role;            
-            console.log(role.role);
-            let domain = role.role;
-            console.log(domain)
+
+        localStorage.setItem("logged_in_users",JSON.stringify(data));
+        // for(let role of data){
+            alert("i")
+            constant = constant +  data.role;            
+            // console.log(role.role);
+            let domain = data.role;
+            console.log(data.role)
             if(domain == "user"){
+                
                 alert("Successfully Login");
                 passing_username();
                 window.location.href = "homepage.html"
@@ -38,7 +41,7 @@ function login_validation(){
             }
                         
             
-        }
+        // }
         }    
                
  

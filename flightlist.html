@@ -19,15 +19,16 @@
     </script>
     <header>
         <div class="header">
-            <a class="nav_item">
-                <strong id="username">Username</strong>
-            </a>&nbsp;
-            <a class="nav_item" onclick="logout()">
-                <strong>Logout</strong>
-            </a> 
+            <a >
+                <button type="submit" class="nav_item"  onclick="all_flights()">All Flights</button>&nbsp;
+                <button type="submit" class="nav_item" onclick="addflight()">Add Flights</button>&nbsp;
+                <button type="submit" class="nav_item" onclick="passenger_list()">Passenger List</button>
+            </a>
+           
 
         </div>
     </header>
+    <br><br>
     <main>
         
         <div class="search">
@@ -65,10 +66,7 @@
 
             <button type="submit" class="search_button">Search</button>
             </form>
-            <button type="submit" class="search_button" onclick="all_flights()">All Flights</button>
-            <button type="submit" class="search_button" onclick="addflight()">Add Flights</button>
-            <button type="submit" class="search_button" onclick="passenger_list()">Passenger List</button>
-
+ 
         </div>
         <div class="fieldset_table">
 
