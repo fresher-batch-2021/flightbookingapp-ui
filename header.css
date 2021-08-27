@@ -1,7 +1,7 @@
 .airline{
     text-align: left;
     background-color: #04AA6D;    
-    padding: 20px;
+    padding: 5px;
     color: white;
     
 }
@@ -23,4 +23,8 @@
     font-size: 18px;
     padding: 10px;
     
+    
+}
+li{
+   padding-top: 10px;
 }

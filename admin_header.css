@@ -1,7 +1,7 @@
 .airline{
     text-align: left;
     background-color: #6495ED;    
-    padding: 20px;
+    padding: 5px;
     color: white;
     
 }
@@ -14,7 +14,7 @@
 .nav-item{
     display: inline;
     float: right;
-    padding-top: 10px;
+    
     
 }
 .nav-item .nav-link{
@@ -33,3 +33,6 @@
     
     
 }
+li{
+    padding-top: 10px;
+ }

@@ -18,7 +18,7 @@ body{
     padding-right: 15px;
     font-size: 18px;
 }
-.nav_item{
+/* .nav_item{
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
@@ -30,7 +30,7 @@ body{
     background-color: rgba(0, 0, 0, 0.8);    
     color: white;
     
-}
+} */
 .nav_item:hover{
     background-color:#04AA6D ;
 }
