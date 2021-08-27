@@ -3,6 +3,7 @@ function flight_data(){
     
     var from = document.querySelector(".from").value;
     var to = document.querySelector(".to").value;
+    var flight_name = document.querySelector(".flight_name").value;
 
     let url ="https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/add_flight/_all_docs?include_docs=true";
     const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
@@ -14,7 +15,7 @@ function flight_data(){
     const users = data.map(obj=>obj.doc);
     console.log(users);
        
-    var results = users.filter(obj => obj.source == from && obj.destination == to);
+    var results = users.filter(obj => obj.source == from && obj.destination == to && obj.name == flight_name);
         
     console.log(results);    
     

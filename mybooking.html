@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger list</title>
+    <link rel="stylesheet" href="mybooking.css">
+    <script src="mybooking.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header id="header"></header>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $("#header").load("header.html")
+    </script>
+    <!-- <header>
+        <div class="header">
+            <a class="nav_item">
+                <strong id="username">Username</strong>
+            </a>&nbsp;
+            <a class="nav_item" onclick="logout()">
+                <strong>Logout</strong>
+            </a> 
+
+        </div>
+    </header> -->
+    <main>
+        <br><br>
+        
+        
+        </div class="fieldset_table">
+        <br><br><br>
+        <table class="passenger_table">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th id="#">S.No</th>
+                    <th id="#">FlightName</th>
+                    <th id="#">Date</th>
+                    <th id="#">From</th>
+                    <th id="#">To</th>
+                    <th id="#">No.of.passenger</th>
+                    <th id="#">Ticket fare</th>
+                    <th id="#">Total fare</th>
+                    <th id="#">Status</th>
+                    <th id="#">Cancel</th>
+                   
+                    
+                </tr>
+            </thead>
+            <tbody id="task_table"></tbody>
+        </table>
+        <button onclick="back()" class="back_button">Back</button>
+    </main>
+    <!-- <script>
+        let user_details = JSON.parse(localStorage.getItem('user'));
+        console.log(user_details);
+        document.querySelector("#username").innerHTML = user_details.username;
+        
+    </script> -->
+</body>
+</html>

@@ -29,9 +29,16 @@ li{
    padding-top: 10px;
 }
 a.sub_heading{
-    padding-right: 800px;
+    padding-right: 500px;
     font-size: 18px;
-    
+    display: inline;
     text-decoration: none;
     color: white;
+}
+a.booking{
+    padding-right: 40px;
+    font-size: 18px;
+    display: inline;
+    text-decoration: none;
+    color: white;   
 }

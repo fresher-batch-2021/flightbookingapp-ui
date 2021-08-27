@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.header{
+    float: right;
+    padding-right: 15px;
+    font-size: 18px;
+}
+.nav_item{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8);    
+    color: white;
+    
+}
+.search{       
+    padding: 20px;
+    width: 80%;
+}
+.flight_name{
+    width: 300px;  
+    height: 30px;        
+    border-radius: 3px;  
+    padding-left: 8px;
+}
+.depature_date{
+    width: 300px;  
+    height: 30px;        
+    border-radius: 3px;  
+    padding-left: 8px;
+}
+.search_button{
+    font-family:  sans-serif;
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 200px;  
+    height: 50px;  
+    border: none;  
+    border-radius: 4px;  
+    padding-left: 0px;  
+    color:white;
+    background-color:#6495ED;
+    
+    
+}
+.search_button:hover{
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+}
+.search{
+    display: inline;
+}
+.passenger_table{
+    margin: auto;
+    font-size: 20px;    
+    tab-size: 500px;
+    width: 70%;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-collapse: collapse; 
+        
+    
+}
+.passenger_table tr{
+    height: 50px;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.passenger_table th{
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;
+    border: 1px solid #ddd;
+    
+}   
+.passenger_table td{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.heading{
+    margin: auto;
+    color: black;
+    
+}
+.back_button{
+    float: right;
+    margin-top: 20%;
+    margin-right: 20px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+aside {
+    width: 25%;
+    height: 320px;
+    padding-left: 5px;
+    margin-top: 40px;
+    margin-right: 0px;
+    float: right;
+    font-size: 20px;    
+   
+}
+#passenger_details, tr,td,th{
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    color: black;
+    
+}
+.passenger_table button{
+    width: 100%;
+    font-size: 20px;
+    height: 50px;
+    border: none;
+    
+}

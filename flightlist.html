@@ -23,7 +23,7 @@
         
         <div class="search">
             <form  onsubmit="flight_data()">
-            <label for="from"><strong>From</strong></label>
+            <label for="from"><strong>From:</strong></label>
             <select name='from' class="from" required>
                 <option value="">Select a location...</option>
                 <option value="Cambodia">Cambodia</option>
@@ -39,7 +39,7 @@
             </select>
             
 
-            <label for="to"><strong>To</strong></label>
+            <label for="to"><strong>To:</strong></label>
             <select name='to' class="to" required>
                 <option value="">Select a location...</option>
                 <option value="Cambodia">Cambodia</option>
@@ -52,6 +52,13 @@
                 <option value="Singapore">Singapore</option>
                 <option value="Thailand">Thailand</option>
                 <option value="Vietnam">Vietnam</option>
+            </select>
+
+            <label for="flight_name"><strong>FlightName:</strong></label>
+            <select name='flight_name' class="flight_name" required>
+                <option value="">Select Flight...</option>
+                <option value="AirIndia">AirIndia</option>
+                <option value="SpiceJet">SpiceJet</option>                
             </select>
 
             <button type="submit" class="search_button">Search</button>
