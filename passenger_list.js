@@ -48,6 +48,7 @@ function flight_data(){
     
 })
 }
+
 function passenger_details(username){
     console.log(username);
     let flight_name = document.querySelector(".flight_name").value;

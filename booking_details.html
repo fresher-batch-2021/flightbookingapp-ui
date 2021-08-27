@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passenger list</title>
-    <link rel="stylesheet" href="passenger_list.css">
-    <script src="passenger_list.js"></script>
+    <link rel="stylesheet" href="booking_details.css">
+    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
@@ -31,44 +31,8 @@
     </header> -->
     <main>
         <br><br>
-        <div class="search">
-            
-            <form  onsubmit="flight_data()">
-            
-            <label><strong>Flight Name:</strong></label>
-            <select name='flight_name' class="flight_name" required>
-                <option value="">Select Flight...</option>
-                <option value="AirIndia">AirIndia</option>
-                <option value="SpiceJet">SpiceJet</option>                
-            </select>
-            
-            <label for="departure"><strong>Depature date:</strong></label>
-            <input type="date" name="depature" id="depature" class="depature_date" >
-            
-            <button type="submit" class="search_button">Search</button>
-        </form>
-        <aside class="aside">
-            <div class="second_heading">
-                <h2>Passenger details </h2>
-            </div>
-
-            <table id="passenger_details" >
-                <caption></caption>
-                <thead>
-                    <tr>
-                        <th scope="row">S.NO</th>
-                        <th scope="row">Name</th>
-                        <th scope="row">Age</th>
-                        <th scope="row">Gender</th>
-                    </tr>
-                </thead>
-                <tbody id="passenger_tablebody">
-
-                </tbody>
-
-            </table>
-
-        </aside>
+       
+        <h1>Booked Users details</h1>
         </div class="fieldset_table">
         <br><br><br>
         <table class="passenger_table">
@@ -83,14 +47,17 @@
                     <th id="#">Ticket fare</th>
                     <th id="#">Total fare</th>
                     <th id="#">Status</th>
-                    <th id="#">Passenger details</th>
+                    <th id="#">cancel</th>
+                    
                     
                 </tr>
             </thead>
             <tbody id="task_table"></tbody>
         </table>
-        <button onclick="back()" class="back_button">Back</button>
+        <button onclick="flight_data()" class="back_button">Back</button>
+        
     </main>
+    <script src="booking_details.js"></script>
     <!-- <script>
         let user_details = JSON.parse(localStorage.getItem('user'));
         console.log(user_details);
