@@ -31,8 +31,9 @@ function displayPassengerDetails() {
     var content = "";
     let i =0;
     for (let passengerObj of passengers) {
+        
+        content += "<tr><td>" + (i+1) + "</td><td>" + passengerObj.name + "</td><td>" + passengerObj.age + "</td><td>" + passengerObj.gender + "</td><td><button type='button' onclick = 'cancel_passenger("+i+")'>Remove</button></td></tr>";
         i++;
-        content += "<tr><td>" + i + "</td><td>" + passengerObj.name + "</td><td>" + passengerObj.age + "</td><td>" + passengerObj.gender + "</td></tr>";
     }
     document.querySelector("#passenger_tablebody").innerHTML = content;
     document.querySelector("#passenger_count").innerHTML = i;
@@ -49,7 +50,19 @@ function displayPassengerDetails() {
     localStorage.setItem('ticket_fare',JSON.stringify(ticket_fare)); 
 
 }
+function cancel_passenger(index){
+    alert("remove" + index);
+    let usersStr = localStorage.getItem("passengers");
+    console.log(usersStr);
+    // if users data available in localStorage, then do parse else assign an empty array
+    let passengers = usersStr != null ? JSON.parse(usersStr) : [];
+    passengers.splice(index,1);
+    localStorage.setItem("passengers", JSON.stringify(passengers));
+    displayPassengerDetails();
 
+
+
+}
 function passenger_details() {
     //set passengers details
     var passengerName = document.getElementById("name").value;
