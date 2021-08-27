@@ -28,3 +28,10 @@
 li{
    padding-top: 10px;
 }
+a.sub_heading{
+    padding-right: 800px;
+    font-size: 18px;
+    
+    text-decoration: none;
+    color: white;
+}
