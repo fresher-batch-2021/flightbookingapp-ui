@@ -47,6 +47,7 @@ function mybooking(){
     
 })
 }
+mybooking();
 function cancel_ticket(id,rev){
     let cfm = confirm("Do you want to delete this data?");
     if(cfm){

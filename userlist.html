@@ -5,19 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passenger list</title>
-    <link rel="stylesheet" href="mybooking.css">
-    <script src="mybooking.js"></script>
+    <link rel="stylesheet" href="userlist.css">
+    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <header id="header"></header>
-
+    <header id="admin_header"></header>
     <script src="jquery.min.js"></script>
     <script>
-        $("#header").load("header.html")
+        $("#admin_header").load("admin_header.html")
     </script>
     <!-- <header>
         <div class="header">
@@ -32,34 +31,30 @@
     </header> -->
     <main>
         <br><br>
-        <div class="depature_information">
-            <h2>My Booking Details</h2>
-        </div>
-        
+       
+        <h1>Users details</h1>
         </div class="fieldset_table">
-        <br>
+        <br><br><br>
         <table class="passenger_table">
             <caption></caption>
             <thead>
                 <tr>
                     <th id="#">S.No</th>
-                    <th id="#">FlightName</th>
-                    <th id="#">Date</th>
-                    <th id="#">From</th>
-                    <th id="#">To</th>
-                    <th id="#">No.of.passenger</th>
-                    <th id="#">Ticket fare</th>
-                    <th id="#">Total fare</th>
-                    <th id="#">Status</th>
-                    <th id="#">Cancel</th>
-                   
+                    <th id="#">Name</th>
+                    <th id="#">MobileNumber</th>
+                    <th id="#">Email</th>
+                    <th id="#">Username</th>
+                    
+                    
                     
                 </tr>
             </thead>
             <tbody id="task_table"></tbody>
         </table>
         
+        
     </main>
+    <script src="userlist.js"></script>
     <!-- <script>
         let user_details = JSON.parse(localStorage.getItem('user'));
         console.log(user_details);
