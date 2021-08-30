@@ -1,6 +1,6 @@
 function add_flight(){
     event.preventDefault();   
-    alert("a");
+    
     var flight_name = document.getElementById("name").value;
     var destination = document.getElementById("destination").value;
     var source = document.getElementById("source").value;
