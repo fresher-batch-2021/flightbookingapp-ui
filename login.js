@@ -5,8 +5,7 @@ function login_validation(){
     const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
     const basicAuth = 'Basic '  + btoa(dbusername+ ":" +dbpassword);
     var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    var role = document.getElementById("role").value
+    var password = document.getElementById("password").value;    
     let formData = {    
         selector:{      
         username: username,          
@@ -23,10 +22,10 @@ function login_validation(){
         let constant = "";
 
         localStorage.setItem("logged_in_users",JSON.stringify(data));
-        // for(let role of data){
+       
             
             constant = constant +  data.role;            
-            // console.log(role.role);
+            
             let domain = data.role;
             console.log(data.role)
             if(domain == "user"){

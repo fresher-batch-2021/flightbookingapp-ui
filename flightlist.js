@@ -20,7 +20,7 @@ function flight_data(){
     console.log(results);    
     
     let content = "";
-    for (task of results) {
+    for (let task of results) {
 
         content = content + `<tr><td>${task.name}</td><td>${task.source+"-"+task.startTime}</td><td>${task.destination+"-"+task.endTime}</td><td>${task.price}</td><td><button type='button'  onclick = "cancel_flight('${task._id}','${task._rev}')">Cancel </button></td></tr>`;}
     console.log(content);
@@ -40,7 +40,7 @@ function all_flights(){
     const users = data.map(obj=>obj.doc);
     console.log(users);
     let content = "";
-    for (task of users) {
+    for (let task of users) {
 
         content = content + `<tr><td>${task.name}</td><td>${task.source+"-"+task.startTime}</td><td>${task.destination+"-"+task.endTime}</td><td>${task.price}</td><td><button type='button'  onclick = "cancel_flight('${task._id}','${task._rev}')"> Cancel </button></td></tr>`;
     }
