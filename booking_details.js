@@ -20,24 +20,7 @@ function flight_data(){
         
         document.querySelector("#task_table").innerHTML = value;
     }
-    // for(let user of users)
-    // {
-    //     if(user.flight_name == flight_name && user.date == booking_date)
-    //     {
-    //         console.log("res",user);
-            
-    //         for(let passenger of user.passengers){
-    //             i++
-    //             value = value + `<tr><td>${i}</td><td>${passenger.name}</td><td>${passenger.age}</td><td>${passenger.gender}</td></tr>` ;
-                
-    //         }
-    //         console.log(value);
-            
-    //     }
-        
-    //     document.querySelector("#task_table").innerHTML = value;
-    // }    
- 
+    
     
 })
 }
