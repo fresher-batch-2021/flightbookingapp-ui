@@ -19,12 +19,12 @@ function login_validation(){
         if(data.length == 0){
             alert("Invaild login credentials")
         }else{
-        let constant = "";
+        
 
         localStorage.setItem("logged_in_users",JSON.stringify(data));
        
             
-            constant = constant +  data.role;            
+                    
             
             let domain = data.role;
             console.log(data.role)
