@@ -24,6 +24,7 @@ body{
 .search{       
     padding: 20px;
     width: 80%;
+    display: inline;
 }
 .flight_name{
     width: 300px;  
@@ -55,9 +56,7 @@ body{
     background: rgba(0, 0, 0, 0.5);
     color:white;
 }
-.search{
-    display: inline;
-}
+
 .passenger_table{
     margin: auto;
     font-size: 20px;    
