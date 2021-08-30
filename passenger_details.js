@@ -96,12 +96,7 @@ function passenger_details() {
 
 
 function registration_successful() {
-    // let No_of_passengers = document.getElementsByTagName("passenger_count").value;
-    // let ticket_fare = document.getElementById("ticket_fare").value;
-    // let total_fare = document.getElementById("total_fare").value;
-    // console.log(No_of_passengers);
-    // console.log(ticket_fare);
-    // console.log(total_fare);
+   
     let ticket_fare = JSON.parse(localStorage.getItem('ticket_fare'));
     console.log(ticket_fare);
     let no_of_passenger = ticket_fare.no_of_passenger;
@@ -120,11 +115,7 @@ function registration_successful() {
     console.log(user_details);
     let user = user_details.username;
     console.log(user);
-    // for(let value of user_details){
-    //     user = user+ value.username;
-    // }
-    // console.log(user);
-
+   
 
     let usersStr = localStorage.getItem("passengers");
     console.log(usersStr);
