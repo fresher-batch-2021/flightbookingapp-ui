@@ -5,8 +5,7 @@
     <div class="airline">
         <ul>
         <a href="index.html" class="heading"> Airline</a>
-        <a class="menu" href="mybooking.html" onclick="mybooking()" data-loggedin="true" >MyBooking</a>
-        <a class="menu" href="homepage.html" data-loggedin="true">Ticket Booking</a>
+
 
         <li class="nav-item" data-loggedin="false">
             <a class="nav-link" href="login.html">Login</a>
@@ -20,6 +19,12 @@
         </li>
         <li class="nav-item" data-loggedin="true">
             <a class="nav-link" href="#" id="profile"> Welcome {{user.username}}</a>
+        </li>
+        <li class="nav-item" data-loggedin="true">
+            <a class="nav-link" id="menu" href="mybooking.html" onclick="mybooking()" >My Booking</a>
+        </li>
+        <li class="nav-item" data-loggedin="true">
+            <a class="nav-link" id="menu" href="homepage.html" >Ticket Booking</a>
         </li>
         
         </ul>
