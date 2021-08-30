@@ -13,10 +13,10 @@ function user_list(){
     let value = "";
     let i = 0;
     for(let user of users){
-        
+            if(user.role == "user"){
             i++;
             value = value + `<tr><td>${i}</td><td>${user.name}</td><td>${user.mobilenumber}</td><td>${user.email}</td><td>${user.username}</td></tr>` ;
-            
+        }
         
         document.querySelector("#task_table").innerHTML = value;
     }

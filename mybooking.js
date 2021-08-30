@@ -68,4 +68,4 @@ function cancel_ticket(id,rev){
 }
     
 }
-mybooking();
+
