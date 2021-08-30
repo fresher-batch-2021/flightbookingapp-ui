@@ -1,11 +1,9 @@
 function mybooking(){
-    event.preventDefault(); 
+    //event.preventDefault(); 
     let user_details = JSON.parse(localStorage.getItem('logged_in_users'));
     console.log(user_details);
     let username = user_details.username;
-    console.log(user);
-    
-   
+    //console.log(user);
     let url ="https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/passenger_details/_all_docs?include_docs=true";
     const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
     const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
