@@ -51,7 +51,7 @@ function displayPassengerDetails() {
 
 }
 function cancel_passenger(index){
-    alert("remove" + index);
+    
     let usersStr = localStorage.getItem("passengers");
     console.log(usersStr);
     // if users data available in localStorage, then do parse else assign an empty array

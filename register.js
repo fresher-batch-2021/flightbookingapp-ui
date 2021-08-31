@@ -4,7 +4,7 @@ function register(){
     var mobile_number = document.getElementById("mobile").value;
     var email = document.getElementById("email").value;
     var user_name = document.getElementById("username").value;
-    var role = document.getElementById("role").value
+    var role = "user";
     var password = document.getElementById("password").value;
     var confirm_password = document.getElementById("confirm").value;
     let user_details = {
