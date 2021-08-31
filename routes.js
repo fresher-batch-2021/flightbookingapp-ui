@@ -1,4 +1,5 @@
 const routes = [
+    { path: '', redirectTo: 'index.html', pathMatch: 'full'},
     { path: 'index.html' },
     { path: 'login.html' },
     { path: 'register.html' },
@@ -43,7 +44,7 @@ let allowedAccess = checkAccess(pathName, role);
 console.log("Access :", allowedAccess);
 
 if (!allowedAccess) {
-    alert("You are not authorized to access this page. Redirecting to login page");
+    alert("You are not authorized to access this page. Redirecting to login page  rejesh");
     window.location.href = "login.html";
 }
 }) ();
