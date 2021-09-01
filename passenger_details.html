@@ -10,7 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 <body>
@@ -128,7 +129,9 @@
 
             let depatute_date = JSON.parse(localStorage.getItem('depature_date'));
             console.log(depatute_date);
-            document.querySelector("#depature_date").innerHTML = depatute_date;
+            let orderedDate = new Date(depatute_date).toJSON(); //.substr(0, 10);
+            let date = moment(new Date(orderedDate)).format("DD-MM-YYYY");
+            document.querySelector("#depature_date").innerHTML = date;
             
         </script>
 

@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="booking.css">
     <script src="booking.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     
 </head>
 
@@ -53,7 +55,9 @@
             //depature date
             let depatute_date = JSON.parse(localStorage.getItem('depature_date'));
             console.log(depatute_date);
-            document.querySelector("#depature_date").innerHTML = depatute_date;
+            let orderedDate = new Date(depatute_date).toJSON(); //.substr(0, 10);
+            let date = moment(new Date(orderedDate)).format("DD-MM-YYYY");
+            document.querySelector("#depature_date").innerHTML = date;
 
             //flight details
             let user_details = JSON.parse(localStorage.getItem('flight_details'));

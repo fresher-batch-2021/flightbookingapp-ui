@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="ticket.css">
     <script src="ticket.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <body>
     <header id="header"></header>
@@ -42,7 +44,7 @@
             </div>
             <br><br>
             <div class="destination_date">
-                <label>Destination Date:</label>
+                <label>Journey Date:</label>
                 <label id = "depature_date"></label>
             </div>
             <br>
@@ -84,7 +86,9 @@
 
      let depature_date = JSON.parse(localStorage.getItem('depature_date'));     
      console.log(depature_date);
-     document.querySelector("#depature_date").innerHTML = depature_date;
+     let orderedDate = new Date(depature_date).toJSON(); //.substr(0, 10);
+     let date = moment(new Date(orderedDate)).format("DD-MM-YYYY");
+     document.querySelector("#depature_date").innerHTML = date;
 
      let passengers_details = JSON.parse(localStorage.getItem('passengers'));     
      console.log(passengers_details);

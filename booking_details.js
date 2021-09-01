@@ -15,7 +15,9 @@ function flight_data(){
     for(let user of users){
         
             i++;
-            value = value + `<tr><td>${i}</td><td>${user.username}</td><td>${user.flight_name}</td><td>${user.date}</td><td>${user.from}</td><td>${user.to}</td><td>${user.no_of_passengers}</td><td>${user.ticket_fare}</td><td>${user.total_fare}</td><td>${"Booked"}</td><td><button type='button'  onclick = "cancel_booking('${user._id}','${user._rev}')"> Cancel </button></td></tr>` ;
+            let orderedDate = new Date(user.date).toJSON(); //.substr(0, 10);
+            let date = moment(new Date(orderedDate)).format("DD-MM-YYYY");
+            value = value + `<tr><td>${i}</td><td>${user.username}</td><td>${user.flight_name}</td><td>${date}</td><td>${user.from}</td><td>${user.to}</td><td>${user.no_of_passengers}</td><td>${user.ticket_fare}</td><td>${user.total_fare}</td><td>${"Booked"}</td><td><button type='button'  onclick = "cancel_booking('${user._id}','${user._rev}')"> Cancel </button></td></tr>` ;
             
         
         document.querySelector("#task_table").innerHTML = value;
