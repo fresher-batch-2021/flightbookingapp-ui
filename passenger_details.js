@@ -9,27 +9,27 @@ function passenger_validation() {
         toastr.error("Invaild name");
         console.log("toastr completed");
         setTimeout(function () {
-            
+            console.log(timeOutFunction);
         }, 3000);
-        
+
         return false;
     }
     if (passenger_age == "" || passenger_age == null || passenger_age.trim == "") {
         toastr.error("Invaild age");
         console.log("toastr completed");
         setTimeout(function () {
-            
+            console.log(timeOutFunction);
         }, 3000);
-        
+
         return false;
     }
     if (passenger_gender == "select") {
         toastr.error("Invaild Gender");
         console.log("toastr completed");
         setTimeout(function () {
-            
+            console.log(timeOutFunction);
         }, 3000);
-        
+
         return false;
     }
     else {
@@ -100,9 +100,9 @@ function passenger_details() {
         toastr.error("Maximum only 4 passengers");
         console.log("toastr completed");
         setTimeout(function () {
-            
+            console.log(timeOutFunction);
         }, 3000);
-        // alert("Maximum only 4 passengers")
+
         return false;
     } else {
 
