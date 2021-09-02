@@ -1,6 +1,5 @@
 function logout(){
-    localStorage.clear();
-    
+    localStorage.clear();    
     alert("succesfully logout")
     window.location.href = "index.html"
 }

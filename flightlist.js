@@ -62,6 +62,7 @@ function cancel_flight(id,rev){
 
     axios.delete(url+id+"?rev="+rev, { headers: {'Authorization': basicAuth}}).then(res => {
     alert("Deleted succesfully");
+    window.location.reload();
 
     }).catch(err =>{
         alert("error in deleting");
