@@ -14,29 +14,33 @@ function login_validation(){
         fields: ["role","_id","username"]   
     };
     axios.post(url, formData, {headers: { Authorization: basicAuth}}).then(res=>{            
-        let data = res.data.docs[0];
+        let data = res.data.docs;
         console.log(data);
         if(data.length == 0){
-            alert("Invaild login credentials")
-        }else{
-        
-
-        localStorage.setItem("logged_in_users",JSON.stringify(data));
-       
+            toastr.error("Invalid login credentials");
             
+        }else{       
+
+            let user = data[0];
+        localStorage.setItem("logged_in_users",JSON.stringify(user));          
                     
             
-            let domain = data.role;
-            console.log(data.role)
+            let domain = user.role;
+            console.log(user.role)
             if(domain == "user"){
-                
-                alert("Successfully Login");
-                passing_username();
-                window.location.href = "homepage.html"
+                toastr.success("login succesful");
+                    console.log("toastr completed");
+                    setTimeout(function () {
+                        window.location.href = "homepage.html"
+                    }, 3000);
+               
             }else if(domain == "admin"){
-                alert("Successfully Login");
-                passing_username();
-                window.location.href = "flightlist.html"
+                toastr.success("login succesful");
+                console.log("toastr completed");
+                setTimeout(function () {
+                    window.location.href = "flightlist.html"
+                }, 3000);
+                
             }
                         
             

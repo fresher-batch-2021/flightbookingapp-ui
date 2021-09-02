@@ -6,15 +6,30 @@ function passenger_validation() {
 
 
     if (passenger_name == "" || passenger_name == null || passenger_name.trim == "") {
-        alert("invaild name");
+        toastr.error("Invaild name");
+        console.log("toastr completed");
+        setTimeout(function () {
+            
+        }, 3000);
+        
         return false;
     }
     if (passenger_age == "" || passenger_age == null || passenger_age.trim == "") {
-        alert("invaild age")
+        toastr.error("Invaild age");
+        console.log("toastr completed");
+        setTimeout(function () {
+            
+        }, 3000);
+        
         return false;
     }
     if (passenger_gender == "select") {
-        alert("invaild gender")
+        toastr.error("Invaild Gender");
+        console.log("toastr completed");
+        setTimeout(function () {
+            
+        }, 3000);
+        
         return false;
     }
     else {
@@ -29,34 +44,34 @@ function displayPassengerDetails() {
     // if users data available in localStorage, then do parse else assign an empty array
     let passengers = usersStr != null ? JSON.parse(usersStr) : [];
     var content = "";
-    let i =0;
+    let i = 0;
     for (let passengerObj of passengers) {
-        
-        content += "<tr><td>" + (i+1) + "</td><td>" + passengerObj.name + "</td><td>" + passengerObj.age + "</td><td>" + passengerObj.gender + "</td><td><button type='button' onclick = 'cancel_passenger("+i+")'>Remove</button></td></tr>";
+
+        content += "<tr><td>" + (i + 1) + "</td><td>" + passengerObj.name + "</td><td>" + passengerObj.age + "</td><td>" + passengerObj.gender + "</td><td><button type='button' onclick = 'cancel_passenger(" + i + ")'>Remove</button></td></tr>";
         i++;
     }
     document.querySelector("#passenger_tablebody").innerHTML = content;
     document.querySelector("#passenger_count").innerHTML = i;
-    let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));  
+    let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));
     let price = flight_details.price;
     let total = i * price;
     document.querySelector("#total_fare").innerHTML = total;
     let ticket_fare = {
-        "no_of_passenger":i,
-        "ticket_fare":price,
-        "total_fare":total,
+        "no_of_passenger": i,
+        "ticket_fare": price,
+        "total_fare": total,
     }
     console.log(ticket_fare);
-    localStorage.setItem('ticket_fare',JSON.stringify(ticket_fare)); 
+    localStorage.setItem('ticket_fare', JSON.stringify(ticket_fare));
 
 }
-function cancel_passenger(index){
-    
+function cancel_passenger(index) {
+
     let usersStr = localStorage.getItem("passengers");
     console.log(usersStr);
     // if users data available in localStorage, then do parse else assign an empty array
     let passengers = usersStr != null ? JSON.parse(usersStr) : [];
-    passengers.splice(index,1);
+    passengers.splice(index, 1);
     localStorage.setItem("passengers", JSON.stringify(passengers));
     displayPassengerDetails();
 
@@ -70,7 +85,7 @@ function passenger_details() {
     var passengerGender = document.getElementById("gender").value;
     var passengerObj = { "name": passengerName, "age": passengerAge, "gender": passengerGender }
 
-    
+
     let usersStr = localStorage.getItem("passengers");
     console.log(usersStr);
 
@@ -82,28 +97,33 @@ function passenger_details() {
 
 
     if (passengers.length > 4) {
-        alert("Maximum only 4 passengers")
+        toastr.error("Maximum only 4 passengers");
+        console.log("toastr completed");
+        setTimeout(function () {
+            
+        }, 3000);
+        // alert("Maximum only 4 passengers")
         return false;
     } else {
-     
+
         localStorage.setItem("passengers", JSON.stringify(passengers));
         displayPassengerDetails();
 
-        
+
     }
 
 }
 
 
 function registration_successful() {
-   
+
     let ticket_fare = JSON.parse(localStorage.getItem('ticket_fare'));
     console.log(ticket_fare);
     let no_of_passenger = ticket_fare.no_of_passenger;
     let ticket = ticket_fare.ticket_fare;
     let total = ticket_fare.total_fare;
 
-    let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));     
+    let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));
     console.log(flight_details);
 
     let flight_name = flight_details.flight_name;
@@ -115,7 +135,7 @@ function registration_successful() {
     console.log(user_details);
     let user = user_details.username;
     console.log(user);
-   
+
 
     let usersStr = localStorage.getItem("passengers");
     console.log(usersStr);
@@ -129,29 +149,34 @@ function registration_successful() {
         alert("please entre passenger details");
         return false;
     } else {
-           let url ="https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/passenger_details/";
+        let url = "https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/passenger_details/";
         const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
         const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
-        const basicAuth = 'Basic '  + btoa(dbusername+ ":" +dbpassword);
-        let formData ={
+        const basicAuth = 'Basic ' + btoa(dbusername + ":" + dbpassword);
+        let formData = {
             flight_name: flight_name,
-            from:from,
-            to:to,
-            username:user,            
-            no_of_passengers:no_of_passenger,
-            ticket_fare:ticket,
-            total_fare:total,
-            date: depature_date,            
+            from: from,
+            to: to,
+            username: user,
+            no_of_passengers: no_of_passenger,
+            ticket_fare: ticket,
+            total_fare: total,
+            date: depature_date,
             passengers,
-                     
-        };
-        axios.post(url, formData, { headers: {'Authorization': basicAuth}}).then(res=>{            
-            let data = res.data;
-            console.log(data);            
-        alert("Successfully Booked");
-        window.location.href = "ticket.html"
 
-    })
+        };
+        axios.post(url, formData, { headers: { 'Authorization': basicAuth } }).then(res => {
+            let data = res.data;
+            console.log(data);
+            toastr.success("Successfully Booked");
+            console.log("toastr completed");
+            setTimeout(function () {
+                window.location.href = "ticket.html"
+            }, 3000);
+
+
+
+        })
     }
 
 

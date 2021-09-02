@@ -16,32 +16,60 @@ function register(){
     }
 
     if(name=="" || name == null || name.trim ==""){
-        alert("Invalid Name");
+        toastr.error("Invalid Name");
+            console.log("toastr completed");
+            setTimeout(function () {                
+            }, 3000);
+        
         return false;
               
     }
     if(mobile_number == ""){
-        alert("invalid Number");
+        toastr.error("Invalid Number");
+            console.log("toastr completed");
+            setTimeout(function () {                
+            }, 3000);
+        
         return false;
     }
     if(email == ""){
-        alert("invalid Email Id");
+        toastr.error("Invalid Email Id");
+            console.log("toastr completed");
+            setTimeout(function () {                
+            }, 3000);
+        
         return false;
     }
     if(user_name == ""){
-        alert("Invaild User name");
+        toastr.error("Invalid User name");
+            console.log("toastr completed");
+            setTimeout(function () {                
+            }, 3000);
+        
         return false;
     }
     if(password == ""){
-        alert("Invaild Password");
+        toastr.error("Invalid Password");
+            console.log("toastr completed");
+            setTimeout(function () {                
+            }, 3000);
+        
         return false;
     }
     if(confirm_password == ""){
-        alert("Invaild Confirm Password");
+        toastr.error("Invalid Confirm Password");
+            console.log("toastr completed");
+            setTimeout(function () {                
+            }, 3000);
+        
         return false;
     }
     if(password != confirm_password){
-        alert("Password does't match");
+        toastr.error("Password does't match");
+            console.log("toastr completed");
+            setTimeout(function () {                
+            }, 3000);
+        
         return false;
     }
     else{
@@ -62,11 +90,20 @@ function register(){
         axios.post(url, formData, { headers: {'Authorization': basicAuth}}).then(res=>{            
             let data = res.data;
             console.log(data);
-            alert("Successffully Register");
-            window.location.href = "login.html"
+            toastr.success("Successfully Register");
+            console.log("toastr completed");
+            setTimeout(function () {
+                window.location.href = "login.html"                
+            }, 3000);
+            
+            
         }).catch(err=>{
             console.error(err.response.data);
-            alert("Unable to register");
+            toastr.success("Unable to register");
+            console.log("toastr completed");
+            setTimeout(function () {                
+            }, 3000);
+            
         });
     }
 }
