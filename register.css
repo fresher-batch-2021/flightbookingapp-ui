@@ -79,13 +79,13 @@ label{
     padding-left: 8px; 
 }
 #log{  
-    width: 100%;  
-    height: 100%;  
+    width: 150px;  
+    height: 50px;  
     border: none;  
-    border-radius: 10px;  
+    border-radius: 5px;  
     padding-left: 7px;  
     color:black;     
-    font-size: 25px;
+    font-size: 20px;
 }  
 #log:hover{
     background: #04AA6D;

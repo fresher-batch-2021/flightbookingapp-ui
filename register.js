@@ -1,12 +1,12 @@
 function register() {
   event.preventDefault();
-  var name = document.getElementById("name").value;
-  var mobile_number = document.getElementById("mobile").value;
-  var email = document.getElementById("email").value;
-  var user_name = document.getElementById("username").value;
+  var name = $("#name").val();
+  var mobile_number = $("#mobile").val();
+  var email = $("#email").val();
+  var user_name = $("#username").val();
   var role = "user";
-  var password = document.getElementById("password").value;
-  var confirm_password = document.getElementById("confirm").value;
+  var password = $("#password").val();
+  var confirm_password = $("#confirm").val();
   let user_details = {
     Name: name,
     Mobile_no: mobile_number,

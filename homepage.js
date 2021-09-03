@@ -2,9 +2,9 @@
 function passing_data() {
     event.preventDefault();
 
-    var from = document.querySelector(".from").value;
-    var to = document.querySelector(".to").value;
-    var depature_date = document.querySelector(".depature_date").value;
+    var from = $(".from").val();
+    var to = $(".to").val();
+    var depature_date = $(".depature_date").val();
     
     console.log(depature_date)
     console.log("from", from);

@@ -32,8 +32,23 @@ function mybooking(){
 }
 mybooking();
 function cancel_ticket(id,rev){
-    let cfm = confirm("Do you want to delete this data?");
-    if(cfm){
+    // let cfm = confirm("Do you want to delete this data?");
+    // if(cfm){
+     Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )    
     console.log(id);
     console.log(rev);
     let url ="https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/passenger_details/";
@@ -42,7 +57,7 @@ function cancel_ticket(id,rev){
     const basicAuth = 'Basic '  + btoa(dbusername+ ":" +dbpassword);
 
     axios.delete(url+id+"?rev="+rev, { headers: {'Authorization': basicAuth}}).then(res => {
-    alert("Deleted succesfully");
+    
     window.location.reload();
     }).catch(err =>{
         alert("error in deleting");
@@ -50,5 +65,6 @@ function cancel_ticket(id,rev){
     })
 }
     
-}
+})
+          }
 

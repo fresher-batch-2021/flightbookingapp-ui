@@ -4,8 +4,8 @@ function login_validation(){
     const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
     const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
     const basicAuth = 'Basic '  + btoa(dbusername+ ":" +dbpassword);
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;    
+    var username = $("#username").val();
+    var password = $("#password").val();    
     let formData = {    
         selector:{      
         username: username,          
@@ -53,7 +53,7 @@ function login_validation(){
 }   
 
 function passing_username(){    
-    var userName = document.querySelector("#username").value;    
+    var userName = $("#username").val();    
     let username_data = {
         "username": userName,        
     };

@@ -1,15 +1,15 @@
 function passenger_validation() {
     event.preventDefault();
-    var passenger_name = document.getElementById("name").value;
-    var passenger_age = document.getElementById("age").value;
-    var passenger_gender = document.getElementById("gender").value;
+    var passenger_name = $("#name").val();
+    var passenger_age = $("#age").val();
+    var passenger_gender = $("#gender").val();
 
 
     if (passenger_name == "" || passenger_name == null || passenger_name.trim == "") {
         toastr.error("Invaild name");
-        console.log("toastr completed");
+      
         setTimeout(function () {
-            console.log(timeOutFunction);
+            console.log("toastr completed");
         }, 3000);
 
         return false;
@@ -18,7 +18,7 @@ function passenger_validation() {
         toastr.error("Invaild age");
         console.log("toastr completed");
         setTimeout(function () {
-            console.log(timeOutFunction);
+            console.log("toastr completed");
         }, 3000);
 
         return false;
@@ -27,7 +27,7 @@ function passenger_validation() {
         toastr.error("Invaild Gender");
         console.log("toastr completed");
         setTimeout(function () {
-            console.log(timeOutFunction);
+            console.log("toastr completed");
         }, 3000);
 
         return false;
@@ -80,9 +80,9 @@ function cancel_passenger(index) {
 }
 function passenger_details() {
     //set passengers details
-    var passengerName = document.getElementById("name").value;
-    var passengerAge = document.getElementById("age").value;
-    var passengerGender = document.getElementById("gender").value;
+    var passengerName = $("#name").val();
+    var passengerAge = $("#age").val();
+    var passengerGender = $("#gender").val();
     var passengerObj = { "name": passengerName, "age": passengerAge, "gender": passengerGender }
 
 
