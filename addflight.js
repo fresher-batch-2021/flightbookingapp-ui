@@ -53,7 +53,8 @@ if(price == ""){
             source:source,
             startTime:startTime,
             endTime:endTime,
-            price:price            
+            price:"₹"+price,
+            ticket_fare:price            
         };
         axios.post(url, formData, { headers: {'Authorization': basicAuth}}).then(res=>{            
             let data = res.data;

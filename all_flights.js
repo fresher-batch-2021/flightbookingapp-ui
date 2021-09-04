@@ -30,10 +30,10 @@ function cancel_flight(id,rev){
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!",
+            confirmButtonText: "Yes, cancel it!",
           }).then((result) => {
             if (result.isConfirmed) {                
-              Swal.fire("Deleted!", "Your file has been deleted.", "success").then(result1=>{
+              Swal.fire("canceled!", " flight has been canceled.", "success").then(result1=>{
                 window.location.reload();
               });
               

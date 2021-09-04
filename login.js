@@ -1,5 +1,6 @@
 function login_validation(){
     event.preventDefault(); 
+    var role_name = $("#role").val();
     let url ="https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/flightbooking_user/_find";
     const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
     const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
@@ -27,6 +28,8 @@ function login_validation(){
             
             let domain = user.role;
             console.log(user.role)
+
+        if(role_name == domain){
             if(domain == "user"){
                 toastr.success("login succesful");
                     console.log("toastr completed");
@@ -43,7 +46,15 @@ function login_validation(){
                 
             }
                         
+        }else{
+            toastr.error("Role Does't Match");
+                    
+                    setTimeout(function () {
+                        console.log("toastr completed");
+                    }, 3000);
+            return false;
             
+        }    
         // }
         }    
                

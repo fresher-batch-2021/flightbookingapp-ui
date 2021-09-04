@@ -37,6 +37,7 @@
                                 <th id="#">Airline</th>
                                 <th id="#">From</th>
                                 <th id="#">To</th>
+                                <th id="#">Duration</th>
                                 <th id="#">Price</th>
                                 <th id="#">Booking</th>
                             </tr>
@@ -67,7 +68,7 @@
             for (task of user_details) {
                 let button = "<button type='submit' onclick = 'bookNow('${task.name}',2,3,4,5,6)'> Book Now </button>";
                 let breaks ="<br>" ;
-                content = content + `<tr><td>${task.name}</td><td>${task.source+"-"+task.startTime}</td><td>${task.destination+"-"+task.endTime}</td><td>${task.price}</td><td><button type='submit' onclick = "bookNow('${task.name}','${task.source}','${task.startTime}','${task.destination}','${task.endTime}','${task.price}')"> Book Now </button></td></tr>`;
+                content = content + `<tr><td>${task.name}</td><td>${task.source+"-"+task.startTime}</td><td>${task.destination+"-"+task.endTime}</td><td>${task.duration}</td><td>${task.price}</td><td><button type='submit' onclick = "bookNow('${task.name}','${task.source}','${task.startTime}','${task.destination}','${task.endTime}','${task.duration}','${task.price}','${task.ticket_fare}')"> Book Now </button></td></tr>`;
             }
             console.log(content);
             document.querySelector("#task_table").innerHTML = content;

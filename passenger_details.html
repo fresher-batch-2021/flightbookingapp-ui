@@ -71,14 +71,14 @@
                     <strong>Name</strong>
                 </label>
                 <br>
-                <input type="text" name="name" id="name" placeholder="Name" autocomplete="off" autofocus>
+                <input type="text" name="name" id="name" placeholder="Name" autocomplete="off" autofocus required>
                 <br>
                 <br>
                 <label>
                     <strong>Age</strong>
                 </label>
                 <br>
-                <input type="text" name="age" id="age" placeholder="Age" autocomplete="off">
+                <input type="number" name="age" id="age" min="1" max="99" placeholder="Age" autocomplete="off" required>
                 <br>
                 <br>
                 <label><strong>Gender</strong></label>
@@ -99,17 +99,12 @@
         <div>
             <div class="passenger_fare">
                 
-                <p>No of Passengers: &nbsp; <span id="passenger_count"></span></p>
+                <p>No of Passengers:&nbsp; <span id="passenger_count"></span></p>
                 
-                <p>Ticket Fare: &nbsp; <span id="ticket_fare"></span></p>
+                <p>Ticket Fare:&nbsp; <span id="ticket_fare"></span></p>
                 
-                <p>Total fare: &nbsp; <span id="total_fare"></span></p>
-                
-                
-               
-                  
-                              
-
+                <p>Total fare: ₹<span id="total_fare"></span></p>        
+              
             </div>
             <form  >
                 <input type="button" value="Book Now" class="booking_button" onclick="registration_successful()">

@@ -53,7 +53,7 @@ function displayPassengerDetails() {
     document.querySelector("#passenger_tablebody").innerHTML = content;
     document.querySelector("#passenger_count").innerHTML = i;
     let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));
-    let price = flight_details.price;
+    let price = flight_details.ticket_fare;
     let total = i * price;
     document.querySelector("#total_fare").innerHTML = total;
     let ticket_fare = {
@@ -117,11 +117,7 @@ function passenger_details() {
 
 function registration_successful() {
 
-    let ticket_fare = JSON.parse(localStorage.getItem('ticket_fare'));
-    console.log(ticket_fare);
-    let no_of_passenger = ticket_fare.no_of_passenger;
-    let ticket = ticket_fare.ticket_fare;
-    let total = ticket_fare.total_fare;
+
 
     let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));
     console.log(flight_details);
@@ -145,10 +141,22 @@ function registration_successful() {
     console.log(passengers);
 
     console.log(passengers.length);
-    if (passengers.length < 1) {
-        alert("please entre passenger details");
+    if (passengers.length == 0) {
+        toastr.error("Please Enter Passenger Details");
+        
+        setTimeout(function () {
+            console.log("toastr completed");
+        }, 3000);
+        
         return false;
+    
     } else {
+        let ticket_fare = JSON.parse(localStorage.getItem('ticket_fare'));
+        console.log(ticket_fare);
+        let no_of_passenger = ticket_fare.no_of_passenger;
+        let ticket = ticket_fare.ticket_fare;
+        let total = ticket_fare.total_fare;
+
         let url = "https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/passenger_details/";
         const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
         const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
