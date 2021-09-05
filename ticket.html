@@ -43,9 +43,16 @@
                 </div>
             </div>
             <br><br>
-            <div class="destination_date">
+            <div>
+                <div class="destination_date">
                 <label>Journey Date:</label>
                 <label id = "depature_date"></label>
+                </div>
+                <br>
+                <div class="destination_date">
+                <label>Total Ticket Fare:</label>
+                <label id = "total_ticket_fare"></label>
+                </div>
             </div>
             <br>
             <div class="passenger_details">
@@ -72,6 +79,10 @@
 </body>
 </html>
 <script>
+     let ticket_fare = JSON.parse(localStorage.getItem('ticket_fare'));     
+     console.log(ticket_fare);
+     document.querySelector("#total_ticket_fare").innerHTML = "₹"+ticket_fare.total_fare;
+
     let user_details = JSON.parse(localStorage.getItem('user'));
     console.log(user_details);
     // document.querySelector("#username").innerHTML = user_details.username;
@@ -81,8 +92,8 @@
      document.querySelector("#flight_name").innerHTML = flight_details.flight_name;
      document.querySelector("#from").innerHTML = flight_details.depature_from;
      document.querySelector("#to").innerHTML = flight_details.destination;
-     document.querySelector("#from_time").innerHTML = flight_details.start_time;
-     document.querySelector("#to_time").innerHTML = flight_details.end_time;
+     document.querySelector("#from_time").innerHTML = "-"+flight_details.start_time;
+     document.querySelector("#to_time").innerHTML ="-"+ flight_details.end_time;
 
      let depature_date = JSON.parse(localStorage.getItem('depature_date'));     
      console.log(depature_date);

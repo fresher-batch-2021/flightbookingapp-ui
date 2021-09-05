@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flight_list</title>
     <link rel="stylesheet" href="flightlist.css">
-    <script src="flightlist.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
-        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="flightlist.js"></script>
+    
 </head>
 <body>
     <header id="admin_header"></header>
@@ -57,10 +59,8 @@
             </select>
 
             <label for="flight_name"><strong>Airlines:</strong></label>
-            <select name='flight_name' class="flight_name" required>
-                <option value="">Select Flight...</option>
-                <option value="AirIndia">AirIndia</option>
-                <option value="SpiceJet">SpiceJet</option>                
+            <select name='flight_name' class="flight_name" id="flight_name"required>
+                              
             </select>
 
             <button type="submit" class="search_button">Search</button>
@@ -87,6 +87,8 @@
             </form>
         </div>
     </main>
+    
+
     <script>
         let user_details = JSON.parse(localStorage.getItem('user'));
         console.log(user_details);
@@ -95,7 +97,7 @@
     </script>
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+   
     
 </body>
 </html>

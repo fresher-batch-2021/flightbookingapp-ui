@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passenger list</title>
     <link rel="stylesheet" href="passenger_list.css">
-    <script src="passenger_list.js"></script>
+   
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="passenger_list.js"></script>
 </head>
 <body>
     <header id="admin_header"></header>
@@ -29,10 +30,9 @@
             <form  onsubmit="flight_data()">
             
             <label><strong>Airline:</strong></label>
-            <select name='flight_name' class="flight_name" required>
+            <select name='flight_name' class="flight_name" id="flight_name" required>
                 <option value="">Select Flight...</option>
-                <option value="AirIndia">AirIndia</option>
-                <option value="SpiceJet">SpiceJet</option>                
+               
             </select>
             
             <label for="departure"><strong>Depature date:</strong></label>

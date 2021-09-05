@@ -126,6 +126,9 @@ function registration_successful() {
     let from = flight_details.depature_from;
     let to = flight_details.destination;
     let depature_date = flight_details.date;
+    let start_time = flight_details.start_time;
+    let end_time = flight_details.end_time;
+    let duration = flight_details.duration;
 
     let user_details = JSON.parse(localStorage.getItem('logged_in_users'));
     console.log(user_details);
@@ -164,13 +167,17 @@ function registration_successful() {
         let formData = {
             flight_name: flight_name,
             from: from,
+            start_time:start_time,
             to: to,
+            end_time:end_time,
+            duration:duration,
             username: user,
             no_of_passengers: no_of_passenger,
             ticket_fare: ticket,
             total_fare: total,
             date: depature_date,
             passengers,
+            status:"ACTIVE",
 
         };
         axios.post(url, formData, { headers: { 'Authorization': basicAuth } }).then(res => {

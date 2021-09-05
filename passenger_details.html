@@ -34,8 +34,11 @@
                 <td id="from"></td>
                 <th id="#">To:</th>
                 <td id="to"></td>
+                <th id="#">Duration</th>
+                <td id="duration"></td>
                 <th id="#">Depature date</th>
                 <td id="depature_date"></td>
+
             </tr>
         </table>
         <aside class="aside">
@@ -119,8 +122,10 @@
             let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));     
             console.log(flight_details);
             document.querySelector("#flight_name").innerHTML = flight_details.flight_name;
-            document.querySelector("#from").innerHTML = flight_details.depature_from;
-            document.querySelector("#to").innerHTML = flight_details.destination;
+            document.querySelector("#from").innerHTML = flight_details.depature_from +'-'+ flight_details.start_time;
+            document.querySelector("#to").innerHTML = flight_details.destination +'-'+ flight_details.end_time;
+            document.querySelector("#duration").innerHTML = flight_details.duration;
+
             document.querySelector("#ticket_fare").innerHTML = flight_details.price;
 
 
