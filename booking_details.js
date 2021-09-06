@@ -27,8 +27,7 @@ function flight_data(){
 })
 }
 function cancel_booking(id,rev){
-    // let cfm = confirm("Do you want to delete this data?");
-    // if(cfm){
+    
 
         Swal.fire({
             title: 'Are you sure?',

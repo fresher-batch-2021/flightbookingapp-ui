@@ -68,8 +68,7 @@ function all_flights() {
 }
 
 function cancel_flight(id, rev) {
-  // let cfm = confirm("Do you want to delete this data?");
-  // if(cfm){
+  
   Swal.fire({
     title: "Are you sure",
     text: "You won't be able to revert this!",

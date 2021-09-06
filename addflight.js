@@ -86,8 +86,7 @@ function add_flight() {
         setTimeout(function () {
           window.location.href = "all_flights.html";
         }, 2000);
-        // alert("Flight added successfully");
-        // window.location.href = "flightlist.html";
+        
       });
   }
 }
