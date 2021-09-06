@@ -122,10 +122,14 @@ aside {
     color: black;
     
 }
-.passenger_table button{
+.passenger_table tbody button{
     width: 100%;
     font-size: 20px;
     height: 50px;
     border: none;
     
+}
+.passenger_table tbody button:hover{
+    color: white;
+    background-color:#6495ED ;
 }
