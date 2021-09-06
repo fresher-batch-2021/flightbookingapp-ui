@@ -30,7 +30,7 @@ function flight_data() {
         `<tr><td>${task.name}</td><td>${
           task.source + "-" + task.startTime
         }</td><td>${task.destination + "-" + task.endTime}</td><td>${
-          task.price
+          "₹"+task.ticket_fare
         }</td><td><button type='button'  onclick = "cancel_flight('${
           task._id
         }','${task._rev}')">Cancel </button></td></tr>`;
