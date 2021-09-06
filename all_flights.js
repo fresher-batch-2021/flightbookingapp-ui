@@ -17,6 +17,8 @@ function all_flights() {
         `<tr><td>${task.name}</td><td>${
           task.source + "-" + task.startTime
         }</td><td>${task.destination + "-" + task.endTime}</td><td>${
+          task.duration
+        }</td><td>${
           task.price
         }</td><td><button type='button'  onclick = "cancel_flight('${
           task._id

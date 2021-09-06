@@ -61,7 +61,7 @@ body{
     margin: auto;
     font-size: 20px;    
     tab-size: 500px;
-    width: 80%;
+    width: 90%;
     text-align: center;
     border: 1px solid #ddd;
     padding: 8px;
@@ -120,9 +120,13 @@ aside {
 .passenger_table button{
     width: 100%;
     font-size: 20px;
-    height: 50px;
+    height: 40px;
     border: none;
     
+}
+.passenger_table button:hover{
+    color: white;
+    background-color:#6495ED ;
 }
 h1{
     text-align: center;
