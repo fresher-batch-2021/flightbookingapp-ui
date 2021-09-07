@@ -35,27 +35,51 @@ function add_flight() {
     price: price,
   };
   if (flight_name == "" || flight_name == null || flight_name.trim == "") {
-    alert("Invalid Flight Name");
+    toastr.error("Invalid Flight Name");
+    setTimeout(function () {
+      console.log("toastr completed");
+    }, 3000);
+    // alert("Invalid Flight Name");
     return false;
   }
   if (destination == "") {
-    alert("invalid destination details");
+    toastr.error("invalid destination details");
+    setTimeout(function () {
+      console.log("toastr completed");
+    }, 3000);
+  
     return false;
   }
   if (source == "") {
-    alert("invalid source details");
+    toastr.error("invalid source details");
+    setTimeout(function () {
+      console.log("toastr completed");
+    }, 3000);
+    
     return false;
   }
   if (startTime == "") {
-    alert("Invaild startTime");
+    toastr.error("Invaild startTime");
+    setTimeout(function () {
+      console.log("toastr completed");
+    }, 3000);
+    
     return false;
   }
   if (endTime == "") {
-    alert("Invaild endTime");
+    toastr.error("Invaild endTime");
+    setTimeout(function () {
+      console.log("toastr completed");
+    }, 3000);
+    
     return false;
   }
   if (price == "") {
-    alert("Invaild price valiue");
+    toastr.error("Invaild price value");
+    setTimeout(function () {
+      console.log("toastr completed");
+    }, 3000);
+    
     return false;
   } else {
     console.log(flight_details);
