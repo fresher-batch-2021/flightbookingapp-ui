@@ -1,3 +1,12 @@
+$(document).ready (function(){
+
+  console.log("Jquery Loaded");
+
+  $("#passing_data").submit(passing_data);
+
+});
+
+
 function passing_data() {
   event.preventDefault();
 
@@ -44,6 +53,6 @@ function passing_data() {
 
 function setDate() {
   let today = new Date().toJSON().substr(0, 10);
-  document.querySelector("#depature").setAttribute("min", today);
+  $("#depature").attr("min", today);
 }
 setDate();

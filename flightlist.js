@@ -1,9 +1,18 @@
+
+$(document).ready (function(){
+
+  console.log("Jquery Loaded");
+
+  $("#flight_data").submit(flight_data);
+
+});
+
 function flight_data() {
   event.preventDefault();
 
-  var from = document.querySelector(".from").value;
-  var to = document.querySelector(".to").value;
-  var flight_name = document.querySelector(".flight_name").value;
+  var from = $(".from").val();
+  var to = $(".to").val();
+  var flight_name = $(".flight_name").val();
 
   let url =
     "https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/add_flight/_all_docs?include_docs=true";
@@ -36,7 +45,7 @@ function flight_data() {
         }','${task._rev}')">Cancel </button></td></tr>`;
     }
     console.log(content);
-    document.querySelector("#task_table").innerHTML = content;
+    $("#task_table").html(content);
   });
 }
 function all_flights() {
@@ -63,7 +72,7 @@ function all_flights() {
         }','${task._rev}')"> Cancel </button></td></tr>`;
     }
     console.log(content);
-    document.querySelector("#task_table").innerHTML = content;
+    $("#task_table").html(content);
   });
 }
 

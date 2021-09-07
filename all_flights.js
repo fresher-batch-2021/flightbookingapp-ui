@@ -11,6 +11,9 @@ function all_flights() {
     console.log(users);
     let content = "";
     for (let task of users) {
+      
+      $("#task_table tbody").empty();
+
         if(task.status == "ACTIVE"){
       content =
         content +
@@ -25,8 +28,9 @@ function all_flights() {
         }','${task._rev}')"> Cancel </button></td></tr>`;
     }
     console.log(content);
+    $("#task_table tbody").append(content);
 }
-    document.querySelector("#task_table").innerHTML = content;
+    
   });
 }
 

@@ -24,7 +24,7 @@ function mybooking(){
             value = value + `<tr><td>${i}</td><td>${user.flight_name}</td><td>${date}</td><td>${user.from +'-'+ user.start_time}</td><td>${user.to +'-'+ user.end_time}</td><td>${user.no_of_passengers}</td><td>${'₹'+user.ticket_fare}</td><td>${'₹'+user.total_fare}</td><td>${"Booked"}</td><td><button type='button'  onclick = "cancel_ticket('${user._id}','${user._rev}')"> Cancel </button></td></tr>` ;
             
         }
-        document.querySelector("#task_table").innerHTML = value;
+        $("#task_table").html(value);
     }
     
     

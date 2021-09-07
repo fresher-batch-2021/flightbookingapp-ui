@@ -1,3 +1,12 @@
+
+$(document).ready (function(){
+
+    console.log("Jquery Loaded");
+
+    $("#passenger_validation").submit(passenger_validation);
+
+});
+
 function passenger_validation() {
     event.preventDefault();
     var passenger_name = $("#name").val();
@@ -50,12 +59,12 @@ function displayPassengerDetails() {
         content += "<tr><td>" + (i + 1) + "</td><td>" + passengerObj.name + "</td><td>" + passengerObj.age + "</td><td>" + passengerObj.gender + "</td><td><button type='button' onclick = 'cancel_passenger(" + i + ")'>Remove</button></td></tr>";
         i++;
     }
-    document.querySelector("#passenger_tablebody").innerHTML = content;
-    document.querySelector("#passenger_count").innerHTML = i;
+    $("#passenger_tablebody").html(content);
+    $("#passenger_count").html(i);
     let flight_details = JSON.parse(localStorage.getItem('booked_flight_details'));
     let price = flight_details.ticket_fare;
     let total = i * price;
-    document.querySelector("#total_fare").innerHTML = total;
+    $("#total_fare").html(total);
     let ticket_fare = {
         "no_of_passenger": i,
         "ticket_fare": price,

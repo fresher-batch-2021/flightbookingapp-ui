@@ -1,8 +1,8 @@
 function flight_data(){
     event.preventDefault(); 
     
-    let flight_name = document.querySelector(".flight_name").value;
-    let booking_date = document.querySelector(".depature_date").value;
+    let flight_name = $(".flight_name").val();
+    let booking_date = $(".depature_date").val();
     console.log(booking_date);
 
     console.log(flight_name);
@@ -25,7 +25,7 @@ function flight_data(){
             value = value + `<tr><td>${i}</td><td>${user.username}</td><td>${user.from+'-'+user.start_time}</td><td>${user.to+'-'+user.end_time}</td><td>${user.no_of_passengers}</td><td>${'₹'+user.ticket_fare}</td><td>${'₹'+user.total_fare}</td><td>${"Booked"}</td><td><button type='button' onclick = "passenger_details('${user.username}')">Passenger details</button></td></tr>` ;
             
         }
-        document.querySelector("#task_table").innerHTML = value;
+        $("#task_table").html(value);
     }
     
     
@@ -66,8 +66,8 @@ function flight() {
 
 function passenger_details(username){
     console.log(username);
-    let flight_name = document.querySelector(".flight_name").value;
-    let booking_date = document.querySelector(".depature_date").value;
+    let flight_name = $(".flight_name").val();
+    let booking_date =$(".depature_date").val();
     
     let url ="https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/passenger_details/_all_docs?include_docs=true";
     const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
@@ -95,7 +95,7 @@ function passenger_details(username){
             
         }
         
-        document.querySelector("#passenger_tablebody").innerHTML = value;
+        $("#passenger_tablebody").html(value);
     }    
 })
 }

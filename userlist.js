@@ -18,7 +18,7 @@ function user_list(){
             value = value + `<tr><td>${i}</td><td>${user.name}</td><td>${user.mobilenumber}</td><td>${user.email}</td><td>${user.username}</td></tr>` ;
         }
         
-        document.querySelector("#task_table").innerHTML = value;
+        $("#task_table").html(value);
     }
     
  

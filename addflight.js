@@ -1,12 +1,13 @@
+
 function add_flight() {
   event.preventDefault();
 
-  var flight_name = document.getElementById("name").value;
-  var destination = document.getElementById("destination").value;
-  var source = document.getElementById("source").value;
-  var start = document.getElementById("startTime").value;
-  var end = document.getElementById("endTime").value;
-  var price = document.getElementById("price").value;
+  var flight_name = $("#name").val();
+  var destination = $("#destination").val();
+  var source = $("#source").val();
+  var start = $("#startTime").val();
+  var end = $("#endTime").val();
+  var price = $("#price").val();
 
   function diff(start, end) {
     start = start.split(":");
@@ -108,7 +109,7 @@ function add_flight() {
         toastr.success("Flight added successful");
         console.log("toastr completed");
         setTimeout(function () {
-          window.location.href = "all_flights.html";
+           window.location.href = "all_flights.html";
         }, 2000);
         
       });
