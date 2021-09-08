@@ -19,7 +19,7 @@ function login_validation(){
         let data = res.data.docs;
         console.log(data);
         if(data.length == 0){
-            toastr.error("Invalid login credentials");
+            toastr.error(ErrorMessage.login);
             
         }else{       
 
@@ -48,7 +48,7 @@ function login_validation(){
             }
                         
         }else{
-            toastr.error("Role Does't Match");
+            toastr.error(ErrorMessage.role);
                     
                     setTimeout(function () {
                         console.log("toastr completed");

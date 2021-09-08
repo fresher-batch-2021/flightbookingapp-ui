@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="booking.css">
     <script src="booking.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     
 </head>
 
@@ -29,7 +31,7 @@
         <div>
             <div class="fieldset_table">
 
-                <form action="passenger_details.html">
+                <form>
                     <table class="depature_table">
                         <caption></caption>
                         <thead>
@@ -38,6 +40,7 @@
                                 <th id="#">From</th>
                                 <th id="#">To</th>
                                 <th id="#">Duration</th>
+                                <th id="#">Available Tickets</th>
                                 <th id="#">Price</th>
                                 <th id="#">Booking</th>
                             </tr>
@@ -66,9 +69,10 @@
             let content = "";
             //${task.name},${task.source},${task.startTime},${task.destination},${task.endTime},${task.price}
             for (task of user_details) {
-                let button = "<button type='submit' onclick = 'bookNow('${task.name}',2,3,4,5,6)'> Book Now </button>";
+                let button = "<button type='button' onclick = 'bookNow('${task.name}',2,3,4,5,6)'> Book Now </button>";
                 let breaks ="<br>" ;
-                content = content + `<tr><td>${task.name}</td><td>${task.source+"-"+task.startTime}</td><td>${task.destination+"-"+task.endTime}</td><td>${task.duration}</td><td>${task.price}</td><td><button type='submit' onclick = "bookNow('${task.name}','${task.source}','${task.startTime}','${task.destination}','${task.endTime}','${task.duration}','${task.price}','${task.ticket_fare}')"> Book Now </button></td></tr>`;
+                let available_ticket = task.total_ticket - task.booked;
+                content = content + `<tr><td>${task.name}</td><td>${task.source+"-"+task.startTime}</td><td>${task.destination+"-"+task.endTime}</td><td>${task.duration}</td><td>${available_ticket}</td><td>${task.price}</td><td><button type='button' onclick = "bookNow('${task.name}','${task.source}','${task.startTime}','${task.destination}','${task.endTime}','${task.duration}','${available_ticket}','${task.price}','${task.ticket_fare}')"> Book Now </button></td></tr>`;
             }
             console.log(content);
             document.querySelector("#task_table").innerHTML = content;
@@ -81,6 +85,7 @@
     </main>
     <script src="jquery.min.js"></script>
     <script src="header.js"></script>
+    <script src="errormessage.js"></script>
 </body>
 
 </html>

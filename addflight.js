@@ -36,7 +36,7 @@ function add_flight() {
     price: price,
   };
   if (flight_name == "" || flight_name == null || flight_name.trim == "") {
-    toastr.error("Invalid Flight Name");
+    toastr.error(ErrorMessage.flight_name);
     setTimeout(function () {
       console.log("toastr completed");
     }, 3000);
@@ -44,7 +44,7 @@ function add_flight() {
     return false;
   }
   if (destination == "") {
-    toastr.error("invalid destination details");
+    toastr.error(ErrorMessage.from);
     setTimeout(function () {
       console.log("toastr completed");
     }, 3000);
@@ -52,7 +52,7 @@ function add_flight() {
     return false;
   }
   if (source == "") {
-    toastr.error("invalid source details");
+    toastr.error(ErrorMessage.to);
     setTimeout(function () {
       console.log("toastr completed");
     }, 3000);
@@ -60,7 +60,7 @@ function add_flight() {
     return false;
   }
   if (startTime == "") {
-    toastr.error("Invaild startTime");
+    toastr.error(ErrorMessage.startTime);
     setTimeout(function () {
       console.log("toastr completed");
     }, 3000);
@@ -68,7 +68,7 @@ function add_flight() {
     return false;
   }
   if (endTime == "") {
-    toastr.error("Invaild endTime");
+    toastr.error(ErrorMessage.endTime);
     setTimeout(function () {
       console.log("toastr completed");
     }, 3000);
@@ -76,7 +76,7 @@ function add_flight() {
     return false;
   }
   if (price == "") {
-    toastr.error("Invaild price value");
+    toastr.error(ErrorMessage.price);
     setTimeout(function () {
       console.log("toastr completed");
     }, 3000);

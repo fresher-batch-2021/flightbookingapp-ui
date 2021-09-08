@@ -7,7 +7,7 @@ $(document).ready (function(){
 });
 function passing_data() {    
     event.preventDefault();
-    toastr.error("Please Login your account");
+    toastr.error(ErrorMessage.login_account);
     console.log("toastr completed");
     setTimeout(function () { 
         window.location.href = "login.html"            
