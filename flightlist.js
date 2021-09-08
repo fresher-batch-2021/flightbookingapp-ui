@@ -14,13 +14,14 @@ function flight_data() {
   var to = $(".to").val();
   var flight_name = $(".flight_name").val();
 
-  let url =
-    "https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/add_flight/_all_docs?include_docs=true";
-  const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
-  const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
-  const basicAuth = "Basic " + btoa(dbusername + ":" + dbpassword);
+  // let url =
+  //   "https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/add_flight/_all_docs?include_docs=true";
+  // const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
+  // const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
+  // const basicAuth = "Basic " + btoa(dbusername + ":" + dbpassword);
 
-  axios.get(url, { headers: { Authorization: basicAuth } }).then((res) => {
+  // axios.get(url, { headers: { Authorization: basicAuth } })
+  user_service.flight_data().then((res) => {
     let data = res.data.rows;
     const users = data.map((obj) => obj.doc);
     console.log(users);
@@ -49,13 +50,14 @@ function flight_data() {
   });
 }
 function all_flights() {
-  let url =
-    "https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/add_flight/_all_docs?include_docs=true";
-  const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
-  const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
-  const basicAuth = "Basic " + btoa(dbusername + ":" + dbpassword);
+  // let url =
+  //   "https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/add_flight/_all_docs?include_docs=true";
+  // const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
+  // const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
+  // const basicAuth = "Basic " + btoa(dbusername + ":" + dbpassword);
 
-  axios.get(url, { headers: { Authorization: basicAuth } }).then((res) => {
+  // axios.get(url, { headers: { Authorization: basicAuth } })
+  user_service.all_flights().then((res) => {
     let data = res.data.rows;
     const users = data.map((obj) => obj.doc);
     console.log(users);
@@ -102,7 +104,8 @@ function cancel_flight(id, rev) {
       const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
       const basicAuth = "Basic " + btoa(dbusername + ":" + dbpassword);
 
-      axios.get(url, { headers: {'Authorization': basicAuth}}).then(res1=>{
+      axios.get(url, { headers: {'Authorization': basicAuth}})
+      .then(res1=>{
 
         let product  = res1.data;
         console.log(product);

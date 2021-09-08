@@ -169,10 +169,10 @@ function registration_successful() {
         let ticket = ticket_fare.ticket_fare;
         let total = ticket_fare.total_fare;
 
-        let url = "https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/passenger_details/";
-        const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
-        const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
-        const basicAuth = 'Basic ' + btoa(dbusername + ":" + dbpassword);
+        // let url = "https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/passenger_details/";
+        // const dbusername = "apikey-v2-2mxwaz89u58vkezj2e5jfc41xn3komuaq1j49fhhmu8p";
+        // const dbpassword = "58de0ca6ebd4250a97d0a7d300191f68";
+        // const basicAuth = 'Basic ' + btoa(dbusername + ":" + dbpassword);
         let formData = {
             flight_name: flight_name,
             from: from,
@@ -189,7 +189,8 @@ function registration_successful() {
             status:"ACTIVE",
 
         };
-        axios.post(url, formData, { headers: { 'Authorization': basicAuth } }).then(res => {
+        // axios.post(url, formData, { headers: { 'Authorization': basicAuth } })
+        user_service.passenger_details(formData).then(res => {
             let data = res.data;
             console.log(data);
             toastr.success("Successfully Booked");
