@@ -20,5 +20,10 @@ class validator{
         }
     }
 
+    static isValidInput(input,message){
+        if(input == ""){
+            throw new Error(message);
+        }
+    }
     
 }

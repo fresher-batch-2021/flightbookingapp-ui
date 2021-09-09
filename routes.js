@@ -3,8 +3,8 @@ const routes = [
     { path: 'index.html' },
     { path: 'login.html' },
     { path: 'register.html' },
-    { path: 'homepage.html', role: ["user"] },
-    { path: 'booking.html', role: ["user"] },
+    
+    { path: 'booking.html' },
     { path: 'passenger_details.html', role: ["user"] },
     { path: 'ticket.html', role: ["user"] },
     { path: 'mybooking.html', role: ["user"] },

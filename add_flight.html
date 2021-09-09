@@ -36,13 +36,13 @@
                     <strong>Airline Name</strong>
                 </label>
                 <br>
-                <input type="text" name="name" id="name" placeholder="Airline Name" pattern="[A-Za-z]{1,32}" required autocomplete="off">
+                <input type="text" name="name" id="name" placeholder="Airline Name" pattern="[A-Za-z]{1,32}" autocomplete="off" required>
                 <br>
                 <br>
                 <label>
                     <strong>From</strong>
                 </label>
-                <select name='from' class="source" id = "source" required >
+                <select name='from' class="source" id = "source"  required>
                     <option value="">Select a location...</option>
                     <option value="Cambodia">Cambodia</option>
                     <option value="HongKong">Hong Kong</option>
@@ -83,13 +83,13 @@
                 <label>
                     <strong>End Time</strong>
                 </label>
-                <input type="time" name="endTime" id="endTime" required >
+                <input type="time" name="endTime" id="endTime" required>
                 <br>
                 <br>
                 <label>
                     <strong>Price</strong>
                 </label>
-                <input type="number" name="price" id="price" min=100 max="100000"  pattern="\+d{5}+(+,\d{2})?"  required autocomplete="off">
+                <input type="number" name="price" id="price" min=100 max="100000"  pattern="\+d{5}+(+,\d{2})?" required  autocomplete="off">
                 <br><br><br>
                 <button type="reset" id="log">Reset</button>&nbsp;<input type="submit" name="log" id="log" value="Add Flight">
                 <br>
@@ -101,6 +101,7 @@
     </main>
     <script src="errormessage.js"></script>
     <script src="addflight.js"></script>
+    <script src="validator.js"></script>
 </body>
 
 

@@ -5,8 +5,21 @@ function bookNow(name,source,startTime,destination,endTime,duration,available_ti
     let depatute_date = JSON.parse(localStorage.getItem('depature_date'));
     console.log(depatute_date);
     
-    if(available_ticket > 0){
-        
+    let logged_in_users = JSON.parse(localStorage.getItem('logged_in_users'));
+        console.log(logged_in_users);
+
+    if(logged_in_users == null){
+        toastr.error(ErrorMessage.login_account);
+        console.log("toastr completed");
+        setTimeout(function () {
+        console.log("toastr completed");
+        window.location.href = "login.html";
+
+    }, 3000);
+        return false;
+    }
+
+    if(available_ticket > 0){  
 
     
     let booked_flight = {

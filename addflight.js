@@ -35,55 +35,18 @@ function add_flight() {
     duration: duration,
     price: price,
   };
-  if (flight_name == "" || flight_name == null || flight_name.trim == "") {
-    toastr.error(ErrorMessage.flight_name);
-    setTimeout(function () {
-      console.log("toastr completed");
-    }, 3000);
-    // alert("Invalid Flight Name");
-    return false;
-  }
-  if (destination == "") {
-    toastr.error(ErrorMessage.from);
-    setTimeout(function () {
-      console.log("toastr completed");
-    }, 3000);
-  
-    return false;
-  }
-  if (source == "") {
-    toastr.error(ErrorMessage.to);
-    setTimeout(function () {
-      console.log("toastr completed");
-    }, 3000);
-    
-    return false;
-  }
-  if (startTime == "") {
-    toastr.error(ErrorMessage.startTime);
-    setTimeout(function () {
-      console.log("toastr completed");
-    }, 3000);
-    
-    return false;
-  }
-  if (endTime == "") {
-    toastr.error(ErrorMessage.endTime);
-    setTimeout(function () {
-      console.log("toastr completed");
-    }, 3000);
-    
-    return false;
-  }
-  if (price == "") {
-    toastr.error(ErrorMessage.price);
-    setTimeout(function () {
-      console.log("toastr completed");
-    }, 3000);
-    
-    return false;
-  } else {
-    console.log(flight_details);
+
+  try{
+      validator.isValidString(flight_name,ErrorMessage.flight_name);
+      validator.isValidInput(source,ErrorMessage.from);
+      validator.isValidInput(destination,ErrorMessage.to);
+      validator.isValidInput(startTime,ErrorMessage.startTime);
+      validator.isValidInput(endTime,ErrorMessage.endTime);
+      validator.isValidInput(price,ErrorMessage.price);
+
+      
+
+
 
     let url =
       "https://75c481c7-3349-4ad5-86c0-311dd22187eb-bluemix.cloudant.com/add_flight/";
@@ -114,6 +77,14 @@ function add_flight() {
         
       });
   }
+  catch(err){
+    console.error(err.message);
+    toastr.error(err.message);
+  }
+
+  
+ 
+  
 }
 function back() {
   window.location.href = "flightlist.html";

@@ -35,7 +35,7 @@ function login_validation(){
                 toastr.success("login succesful");
                     console.log("toastr completed");
                     setTimeout(function () {
-                        window.location.href = "homepage.html"
+                        window.location.href = "index.html"
                     }, 1000);
                
             }else if(domain == "admin"){
