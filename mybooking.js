@@ -24,8 +24,22 @@ function mybooking(){
             value = value + `<tr><td>${i}</td><td>${user.flight_name}</td><td>${date}</td><td>${user.from +'-'+ user.start_time}</td><td>${user.to +'-'+ user.end_time}</td><td>${user.no_of_passengers}</td><td>${'₹'+user.ticket_fare}</td><td>${'₹'+user.total_fare}</td><td>${"Booked"}</td><td><button type='button'  onclick = "cancel_ticket('${user._id}','${user._rev}')"> Cancel </button></td></tr>` ;
             
         }
-        $("#task_table").html(value);
+        $("#task_table").html(value);   
+    
     }
+    for(let data of users){
+        if(data.username == username && data.status != "ACTIVE" ){
+            console.log("res",data);
+            i++;
+            let orderedDate = new Date(data.date).toJSON(); //.substr(0, 10);
+            let date = moment(new Date(orderedDate)).format("DD-MM-YYYY");
+            value = value + `<tr><td>${i}</td><td>${data.flight_name}</td><td>${date}</td><td>${data.from +'-'+ data.start_time}</td><td>${data.to +'-'+ data.end_time}</td><td>${data.no_of_passengers}</td><td>${'₹'+data.ticket_fare}</td><td>${'₹'+data.total_fare}</td><td>${"Canceled"}</td></tr>` ;
+            
+        }
+        $("#task_table").html(value);
+
+    }
+
     
     
 })

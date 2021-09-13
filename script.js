@@ -46,6 +46,14 @@ function passing_data() {
     );
     
     console.log("rejesh", selectedFlight);
+    if(selectedFlight.length == 0){
+      toastr.error(ErrorMessage.flight_availble);
+    
+    setTimeout(function () {
+      console.log("toastr completed");
+    }, 3000);
+    return false;
+    }
     seats()
     localStorage.setItem("flight_details", JSON.stringify(selectedFlight));
     

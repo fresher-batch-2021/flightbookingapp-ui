@@ -152,6 +152,9 @@ aside {
     color: black;
     font-size: 18px;
 }
+.passenger_fare p{
+    color: black;
+}
 .fare_list{
     display: inline-block;
 }

@@ -104,6 +104,10 @@ function passenger_details() {
     passengers.push(passengerObj);
     console.log(passengers);
 
+    let available = JSON.parse(localStorage.getItem('booked_flight_details'));
+    console.log(available);
+    let tickets = available.available_ticket;
+    console.error(tickets);
 
     if (passengers.length > 4) {
         toastr.error(ErrorMessage.maximum_passenger);
@@ -113,7 +117,15 @@ function passenger_details() {
         }, 3000);
 
         return false;
-    } else {
+    } else if(passengers.length > tickets){
+        toastr.error("Only "+tickets+" Tickets are available");
+        console.log("toastr completed");
+        setTimeout(function () {
+            console.log(timeOutFunction);
+        }, 3000);
+
+    }
+    else {
 
         localStorage.setItem("passengers", JSON.stringify(passengers));
         displayPassengerDetails();

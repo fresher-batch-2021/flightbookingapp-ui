@@ -20,6 +20,8 @@ class ErrorMessage{
     static login_account = "Please Login your account";
 
     static change = "Please change From or To value";
+    
+    static flight_availble = "This Location Flights are not available"
 
     //booking page
 
