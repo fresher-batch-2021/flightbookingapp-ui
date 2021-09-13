@@ -115,6 +115,11 @@
                 <input type="button" value="Book Now" class="booking_button" onclick="registration_successful()">
             </form>
         </div>
+        <footer id="footer"></footer>
+    <script>
+        
+        $("#footer").load("footer.html")
+    </script>
         <script src="passenger_details.js"></script>
         <script>
             let user_details = JSON.parse(localStorage.getItem('user'));
