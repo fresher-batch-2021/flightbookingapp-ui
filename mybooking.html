@@ -11,51 +11,101 @@
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jquery ui tabs --> 
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
 
+  
+      
+      <style>
+        
+     </style>
 
 </head>
 <body>
+ 
+
     <header id="header"></header>
 
-    <script src="jquery.min.js"></script>
-    <script>
-        $("#header").load("header.html")
-    </script>
-   
+    <!-- <script src="jquery.min.js"></script> -->
+  
     <main>
-        
         <div class="depature_information">
             <h2>My Booking Details</h2>
         </div>
+        <div id = "tabs-1">
+            <ul>
+               <li><a href = "#tabs-2">Booked</a></li>
+               <li><a href = "#tabs-3">Cancelled</a></li>
+               
+            </ul>
+            <div id = "tabs-2">
+                <table class="passenger_table">
+                    <caption></caption>
+                    <thead>
+                        <tr>
+                            <th id="#">S.No</th>
+                            <th id="#">Airline</th>
+                            <th id="#">Date</th>
+                            <th id="#">From</th>
+                            <th id="#">To</th>
+                            <th id="#">No.of.passenger</th>
+                            <th id="#">Ticket fare</th>
+                            <th id="#">Total fare</th>
+                            <th id="#">Status</th>
+                            <th id="#">Cancel</th>
+                           
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="task_table"></tbody>
+                </table>
+            </div>
+            <div id = "tabs-3">
+                <table class="passenger_table">
+                    <caption></caption>
+                    <thead>
+                        <tr>
+                            <th id="#">S.No</th>
+                            <th id="#">Airline</th>
+                            <th id="#">Date</th>
+                            <th id="#">From</th>
+                            <th id="#">To</th>
+                            <th id="#">No.of.passenger</th>
+                            <th id="#">Ticket fare</th>
+                            <th id="#">Total fare</th>
+                            <th id="#">Status</th>
+                           
+                           
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="task_table_1"></tbody>
+                </table>
+            </div>
+            
+         </div>
         
-        </div class="fieldset_table">
-        <br>
-        <table class="passenger_table">
-            <caption></caption>
-            <thead>
-                <tr>
-                    <th id="#">S.No</th>
-                    <th id="#">Airline</th>
-                    <th id="#">Date</th>
-                    <th id="#">From</th>
-                    <th id="#">To</th>
-                    <th id="#">No.of.passenger</th>
-                    <th id="#">Ticket fare</th>
-                    <th id="#">Total fare</th>
-                    <th id="#">Status</th>
-                    <th id="#">Cancel</th>
-                   
-                    
-                </tr>
-            </thead>
-            <tbody id="task_table"></tbody>
-        </table>
+        
         
     </main>
     
+    <script>
+        $("#header").load("header.html")
+    </script>
+     <script>
+        $(function() {
+           $( "#tabs-1" ).tabs();
+        });
+     </script>
+
    
     <script src="mybooking.js"></script>
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+   
 </body>
 </html>
