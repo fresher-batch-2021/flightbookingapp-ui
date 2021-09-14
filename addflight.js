@@ -7,6 +7,7 @@ function add_flight() {
   var source = $("#source").val();
   var start = $("#startTime").val();
   var end = $("#endTime").val();
+  var tickets = $("#tickets").val();
   var price = $("#price").val();
 
   function diff(start, end) {
@@ -60,6 +61,7 @@ function add_flight() {
       startTime: start,
       endTime: end,
       duration: duration,
+      total_ticket: tickets,
       price: "₹" + price,
       ticket_fare: price,
       status: "ACTIVE",
