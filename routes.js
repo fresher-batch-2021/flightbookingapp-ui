@@ -5,6 +5,7 @@ const routes = [
     { path: 'register.html' },
     
     { path: 'booking.html' },
+    { path: 'aboutus.html' },
     { path: 'passenger_details.html', role: ["user"] },
     { path: 'ticket.html', role: ["user"] },
     { path: 'mybooking.html', role: ["user"] },

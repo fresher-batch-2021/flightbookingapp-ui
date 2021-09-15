@@ -32,14 +32,14 @@ function login_validation(){
 
         if(role_name == domain){
             if(domain == "user"){
-                toastr.success("login succesful");
+                toastr.success("login successful");
                     console.log("toastr completed");
                     setTimeout(function () {
                         window.location.href = "index.html"
                     }, 1000);
                
             }else if(domain == "admin"){
-                toastr.success("login succesful");
+                toastr.success("login successful");
                 console.log("toastr completed");
                 setTimeout(function () {
                     window.location.href = "flightlist.html"
